@@ -88,15 +88,15 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=f6f2e4&stroke=ddd3b0&ring=a8873a&fire=7a5a12&currStreakLabel=1c1810&sideLabels=4a4636&dates=8a7f5e" />
-  <img src="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=07080f&stroke=1e2235&ring=c9a84c&fire=e8d08a&currStreakLabel=e8eaf2&sideLabels=a0aac4&dates=6b7a99" alt="Streak stats" />
+  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=f6f2e4&stroke=ddd3b0&ring=6d46b8&fire=9b7ee0&currStreakLabel=1c1810&sideLabels=4a4636&dates=8a7f5e" />
+  <img src="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=07080f&stroke=1e2235&ring=a78bfa&fire=7c5cbf&currStreakLabel=e8eaf2&sideLabels=a0aac4&dates=6b7a99" alt="Streak stats" />
 </picture>
 
 <br/>
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=blacksinisterx&bg_color=f6f2e4&color=4a4636&line=a8873a&point=6d46b8&area=true&area_color=ceb8f5&hide_border=true&custom_title=CONTRIBUTION%20TELEMETRY" />
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=blacksinisterx&bg_color=07080f&color=a0aac4&line=c9a84c&point=a78bfa&area=true&area_color=3d2d7a&hide_border=true&custom_title=CONTRIBUTION%20TELEMETRY" width="100%" alt="Contribution activity graph" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=blacksinisterx&bg_color=f6f2e4&color=4a4636&line=6d46b8&point=a8873a&area=true&area_color=f2e0a8&hide_border=true&custom_title=CONTRIBUTION%20TELEMETRY" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=blacksinisterx&bg_color=07080f&color=a0aac4&line=a78bfa&point=c9a84c&area=true&area_color=2a2010&hide_border=true&custom_title=CONTRIBUTION%20TELEMETRY" width="100%" alt="Contribution activity graph" />
 </picture>
 
 <br/><br/>
@@ -119,10 +119,10 @@
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/DOSSIER-storm--bureau--portfolio.vercel.app-c9a84c?style=flat-square&labelColor=07080f)](https://storm-bureau-portfolio.vercel.app/)
-[![GitHub](https://img.shields.io/badge/GITHUB-%40blacksinisterx-a78bfa?style=flat-square&labelColor=07080f)](https://github.com/blacksinisterx)
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-aiza--ali--03--ai-c9a84c?style=flat-square&labelColor=07080f&logo=linkedin&logoColor=c9a84c)](https://www.linkedin.com/in/aiza-ali-03-ai/)
-[![Email](https://img.shields.io/badge/TRANSMIT-aiza.ali03%40gmail.com-a78bfa?style=flat-square&labelColor=07080f&logo=gmail&logoColor=a78bfa)](mailto:aiza.ali03@gmail.com)
+[![Portfolio](https://img.shields.io/badge/DOSSIER-storm--bureau--portfolio.vercel.app-a78bfa?style=flat-square&labelColor=07080f)](https://storm-bureau-portfolio.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GITHUB-%40blacksinisterx-c9a84c?style=flat-square&labelColor=07080f)](https://github.com/blacksinisterx)
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-aiza--ali--03--ai-a78bfa?style=flat-square&labelColor=07080f&logo=linkedin&logoColor=a78bfa)](https://www.linkedin.com/in/aiza-ali-03-ai/)
+[![Email](https://img.shields.io/badge/TRANSMIT-aiza.ali03%40gmail.com-c9a84c?style=flat-square&labelColor=07080f&logo=gmail&logoColor=c9a84c)](mailto:aiza.ali03@gmail.com)
 
 </div>
 

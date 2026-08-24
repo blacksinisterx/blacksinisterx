@@ -8,12 +8,12 @@
 
       .bg { fill: #0d0f1a; }
       .card { fill: #0f111d; stroke: #1e2235; stroke-width: 1; }
-      .title { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; fill: #e8d08a; }
+      .title { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; fill: #7c5cbf; }
       .body { font-family: 'JBM',monospace; font-weight: 500; fill: #a0aac4; }
       .label { font-family: 'JBM',monospace; font-weight: 500; fill: #e8eaf2; }
       .idx { font-family: 'JBM',monospace; font-weight: 500; fill: #6b7a99; letter-spacing: 2px; }
-      .tag { font-family: 'JBM',monospace; font-weight: 500; fill: #a78bfa; letter-spacing: 0.5px; }
-      .pct { font-family: 'JBM',monospace; font-weight: 500; fill: #c9a84c; }
+      .tag { font-family: 'JBM',monospace; font-weight: 500; fill: #c9a84c; letter-spacing: 0.5px; }
+      .pct { font-family: 'JBM',monospace; font-weight: 500; fill: #a78bfa; }
       .stat { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; }
       .dot { animation: pulse 2.2s ease-in-out infinite; transform-origin: center; }
       @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
@@ -27,11 +27,11 @@
   <rect class="bg" width="376" height="270"/>
 
   <rect class="card" width="376" height="270" rx="2"/>
-  <circle class="dot" cx="22" cy="26" r="3.5" fill="#c9a84c"/>
+  <circle class="dot" cx="22" cy="26" r="3.5" fill="#a78bfa"/>
   <text class="idx" x="34" y="30" style="font-size:12px">FILE R3</text>
   <text class="title" x="20" y="58" style="font-size:16.5px">Multi-Turn AI Safety</text>
   <text class="title" x="20" y="79" style="font-size:16.5px">Benchmark</text>
-  <text class="stat" x="20" y="120" style="font-size:24px" fill="#c9a84c">2.5×</text>
+  <text class="stat" x="20" y="120" style="font-size:24px" fill="#a78bfa">2.5×</text>
   <text class="body" x="20" y="140" style="font-size:10.5px">more frequent context-accumulation attack success</text>
   <text class="body" x="20" y="166" style="font-size:10.5px;opacity:0.8">Local eval across Llama3-8B, Hermes3-8B, Qwen2.5-7B</text>
   <text class="body" x="20" y="181" style="font-size:10.5px;opacity:0.8">via JailbreakBench and TruthfulQA. Introduced CARI,</text>

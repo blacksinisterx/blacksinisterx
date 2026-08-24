@@ -8,12 +8,12 @@
 
       .bg { fill: #f6f2e4; }
       .card { fill: #fffdf7; stroke: #ddd3b0; stroke-width: 1; }
-      .title { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; fill: #7a5a12; }
+      .title { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; fill: #9b7ee0; }
       .body { font-family: 'JBM',monospace; font-weight: 500; fill: #4a4636; }
       .label { font-family: 'JBM',monospace; font-weight: 500; fill: #1c1810; }
       .idx { font-family: 'JBM',monospace; font-weight: 500; fill: #8a7f5e; letter-spacing: 2px; }
-      .tag { font-family: 'JBM',monospace; font-weight: 500; fill: #6d46b8; letter-spacing: 0.5px; }
-      .pct { font-family: 'JBM',monospace; font-weight: 500; fill: #a8873a; }
+      .tag { font-family: 'JBM',monospace; font-weight: 500; fill: #a8873a; letter-spacing: 0.5px; }
+      .pct { font-family: 'JBM',monospace; font-weight: 500; fill: #6d46b8; }
       .stat { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; }
       .dot { animation: pulse 2.2s ease-in-out infinite; transform-origin: center; }
       @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
@@ -28,7 +28,7 @@
 
   <g transform="translate(0,0)">
     <rect class="card" width="273" height="210" rx="2"/>
-    <circle class="dot" cx="26" cy="20" r="3" fill="#a8873a" style="animation-delay:-0.0s"/>
+    <circle class="dot" cx="26" cy="20" r="3" fill="#6d46b8" style="animation-delay:-0.0s"/>
     <text class="idx" x="38" y="24" style="font-size:11px">FILE 05</text>
     <text class="title" x="18" y="48" style="font-size:17px">Multi-Tenant</text>
     <text class="title" x="18" y="69" style="font-size:17px">Agentic RAG</text>

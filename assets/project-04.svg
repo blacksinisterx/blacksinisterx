@@ -8,12 +8,12 @@
 
       .bg { fill: #0d0f1a; }
       .card { fill: #0f111d; stroke: #1e2235; stroke-width: 1; }
-      .title { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; fill: #e8d08a; }
+      .title { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; fill: #7c5cbf; }
       .body { font-family: 'JBM',monospace; font-weight: 500; fill: #a0aac4; }
       .label { font-family: 'JBM',monospace; font-weight: 500; fill: #e8eaf2; }
       .idx { font-family: 'JBM',monospace; font-weight: 500; fill: #6b7a99; letter-spacing: 2px; }
-      .tag { font-family: 'JBM',monospace; font-weight: 500; fill: #a78bfa; letter-spacing: 0.5px; }
-      .pct { font-family: 'JBM',monospace; font-weight: 500; fill: #c9a84c; }
+      .tag { font-family: 'JBM',monospace; font-weight: 500; fill: #c9a84c; letter-spacing: 0.5px; }
+      .pct { font-family: 'JBM',monospace; font-weight: 500; fill: #a78bfa; }
       .stat { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; }
       .dot { animation: pulse 2.2s ease-in-out infinite; transform-origin: center; }
       @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
@@ -28,7 +28,7 @@
 
   <g transform="translate(0,0)">
     <rect class="card" width="273" height="210" rx="2"/>
-    <circle class="dot" cx="26" cy="20" r="3" fill="#a78bfa" style="animation-delay:-0.0s"/>
+    <circle class="dot" cx="26" cy="20" r="3" fill="#c9a84c" style="animation-delay:-0.0s"/>
     <text class="idx" x="38" y="24" style="font-size:11px">FILE 04</text>
     <text class="title" x="18" y="48" style="font-size:17px">DetectifAI</text>
     <text class="body" x="18" y="77" style="font-size:11px">Real-time CCTV threat detection —</text>

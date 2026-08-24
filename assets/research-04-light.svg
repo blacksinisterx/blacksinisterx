@@ -8,12 +8,12 @@
 
       .bg { fill: #f6f2e4; }
       .card { fill: #fffdf7; stroke: #ddd3b0; stroke-width: 1; }
-      .title { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; fill: #7a5a12; }
+      .title { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; fill: #9b7ee0; }
       .body { font-family: 'JBM',monospace; font-weight: 500; fill: #4a4636; }
       .label { font-family: 'JBM',monospace; font-weight: 500; fill: #1c1810; }
       .idx { font-family: 'JBM',monospace; font-weight: 500; fill: #8a7f5e; letter-spacing: 2px; }
-      .tag { font-family: 'JBM',monospace; font-weight: 500; fill: #6d46b8; letter-spacing: 0.5px; }
-      .pct { font-family: 'JBM',monospace; font-weight: 500; fill: #a8873a; }
+      .tag { font-family: 'JBM',monospace; font-weight: 500; fill: #a8873a; letter-spacing: 0.5px; }
+      .pct { font-family: 'JBM',monospace; font-weight: 500; fill: #6d46b8; }
       .stat { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; }
       .dot { animation: pulse 2.2s ease-in-out infinite; transform-origin: center; }
       @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
@@ -27,11 +27,11 @@
   <rect class="bg" width="376" height="270"/>
 
   <rect class="card" width="376" height="270" rx="2"/>
-  <circle class="dot" cx="22" cy="26" r="3.5" fill="#6d46b8"/>
+  <circle class="dot" cx="22" cy="26" r="3.5" fill="#a8873a"/>
   <text class="idx" x="34" y="30" style="font-size:12px">FILE R4</text>
   <text class="title" x="20" y="58" style="font-size:16.5px">Seed-Free Data-to-Text</text>
   <text class="title" x="20" y="79" style="font-size:16.5px">Synthesis</text>
-  <text class="stat" x="20" y="120" style="font-size:24px" fill="#6d46b8">114.2%</text>
+  <text class="stat" x="20" y="120" style="font-size:24px" fill="#a8873a">114.2%</text>
   <text class="body" x="20" y="140" style="font-size:10.5px">of fully-supervised baseline, zero-shot</text>
   <text class="body" x="20" y="166" style="font-size:10.5px;opacity:0.8">Zero-shot pipeline via Llama 3.1:8B across WebNLG,</text>
   <text class="body" x="20" y="181" style="font-size:10.5px;opacity:0.8">E2E, and WikiTableQuestions. Eliminates $5K–$50K of</text>

@@ -453,6 +453,38 @@ LIGHT_MAP = {
 }
 
 
+# ------------------------------------------------------------ accent swap
+# Gold was the primary/most-visible accent everywhere (title text, header
+# numerals, the alternating odd-numbered cards, the banner's main sweep)
+# and it wasn't reading as vivid enough against the near-black background
+# -- direct feedback. Rather than hand-edit every one of the ~15 places
+# gold/purple literals appear (BASE_CSS, each header's extra CSS, both
+# card lists, dossier creds, skills quadrants, banner gradients), this
+# swaps the two 3-shade families wherever they appear in an already-
+# rendered file: gold's {primary, light, glow} triplet trades places with
+# purple's {primary, secondary, glow} triplet. Purple/lavender becomes
+# the prominent color, gold becomes the alternate. Runs on every dark
+# file, including banner.svg/header-01..04.svg which have no generator
+# function in this script (hand-built, edited in place).
+# ponytail: only swaps these 6 known hex literals -- a new accent color
+# added later needs its own swap pair added to ACCENT_SWAP_PAIRS below.
+import re
+
+ACCENT_SWAP_PAIRS = [("c9a84c", "a78bfa"), ("e8d08a", "7c5cbf"), ("2a2010", "3d2d7a")]
+ACCENT_SWAP = {}
+for _a, _b in ACCENT_SWAP_PAIRS:
+    ACCENT_SWAP[_a] = _b
+    ACCENT_SWAP[_b] = _a
+_accent_re = re.compile("|".join(ACCENT_SWAP.keys()))
+
+
+def recolor_accents(path):
+    text = open(path, encoding="utf-8").read()
+    text = _accent_re.sub(lambda m: ACCENT_SWAP[m.group(0)], text)
+    open(path, "w", encoding="utf-8").write(text)
+    print("recolored", path)
+
+
 def make_light_variant(path):
     text = open(path, encoding="utf-8").read()
     for dark, light in LIGHT_MAP.items():
@@ -476,5 +508,7 @@ ASSET_FILES = (
     + [f"project-{n:02d}.svg" for n in range(1, 12)]
     + [f"research-{n:02d}.svg" for n in range(1, 6)]
 )
+for f in ASSET_FILES:
+    recolor_accents(f)
 for f in ASSET_FILES:
     make_light_variant(f)
