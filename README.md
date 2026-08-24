@@ -56,7 +56,9 @@ Catches real contradictions in witness testimony — and, shown here, correctly 
 <img src="assets/projects-ops.svg" width="100%" alt="DetectifAI, Multi-Tenant Agentic RAG, CrisSim disaster response, Agentic Airspace Copilot" />
 
 <div align="center">
+
 <sub>[DetectifAI](https://drive.google.com/file/d/1ZpO-nzMJUw8zg00oiZCB-ZGMa06_vxou/view) (demo) · [Multi-Tenant Agentic RAG](https://github.com/blacksinisterx/Multi-Tenant-Agentic-RAG-System) · [CrisSim](https://github.com/blacksinisterx/CrisSim-Multi-Agent-Simulation) · [Agentic Airspace Copilot](https://github.com/sincera315/Assignment3_Agentic_AI_N8N)</sub>
+
 </div>
 
 <br/>
@@ -64,7 +66,9 @@ Catches real contradictions in witness testimony — and, shown here, correctly 
 <a href="https://github.com/blacksinisterx/Ai-Video-Narrator"><img src="assets/projects-secondary.svg" width="100%" alt="AI Video Narrator, Fact-Check Overlay, Clickbait Decoder, AI Slop Blocker" /></a>
 
 <div align="center">
+
 <sub>[AI Video Narrator](https://github.com/blacksinisterx/Ai-Video-Narrator) · [Fact-Check Overlay](https://github.com/blacksinisterx/Fact-Checker) · [Clickbait Decoder](https://github.com/blacksinisterx/Clickbait-Decoder) · [AI Slop Blocker](https://github.com/blacksinisterx/Ai-Slop-Blocker)</sub>
+
 </div>
 
 <div align="center">
@@ -83,7 +87,9 @@ Catches real contradictions in witness testimony — and, shown here, correctly 
 <img src="assets/research.svg" width="100%" alt="Independent and course research: agentic AI security, federated unlearning, AI safety benchmarking, data-to-text synthesis, CNN architecture" />
 
 <div align="center">
+
 <sub>[Agentic AI Safety Audit](https://github.com/blacksinisterx/Agentic-AI-Safety-Audit) · [Federated Unlearning](https://github.com/blacksinisterx/federated-unlearning-multi-attack-evaluation) · Multi-Turn Safety Benchmark · Seed-Free Data-to-Text Synthesis · [CIFAR-100 CNN](https://github.com/blacksinisterx/Artificial-Neural-Network-Project)</sub>
+
 </div>
 
 <br/>
