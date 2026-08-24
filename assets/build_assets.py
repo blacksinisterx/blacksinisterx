@@ -50,8 +50,6 @@ BASE_CSS = """
       @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
       .barfill { animation: grow 1.4s ease-out both; }
       @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-      .placeholder { fill: url(#phGrad); }
-      .phtxt { font-family: 'JBM',monospace; font-weight: 500; fill: #e8eaf2; letter-spacing: 1px; opacity: 0.85; }
 """
 
 
@@ -63,10 +61,6 @@ def svg_open(w, h, extra_css="", extra_defs=""):
 {BASE_CSS}
 {extra_css}
     </style>
-    <linearGradient id="phGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a1f38"/>
-      <stop offset="100%" stop-color="#0a0818"/>
-    </linearGradient>
 {extra_defs}
   </defs>
   <rect class="bg" width="{w}" height="{h}"/>
@@ -100,32 +94,24 @@ def wrap_words(text, max_width_px, font_size, font="jbm"):
     return lines
 
 
-def draw_card(x, y, w, h, idx, title, desc, tags, color, delay=0.0,
-              image_h=0, placeholder_label=None):
-    """One reusable card: optional placeholder strip, title, wrapped
-    description, tags. Raises if the wrapped content would overflow the
-    card's own height, so a layout bug fails the build instead of shipping.
+def draw_card(x, y, w, h, idx, title, desc, tags, color, delay=0.0):
+    """One reusable card: dot + FILE index, title, wrapped description,
+    tags. Raises if the wrapped content would overflow the card's own
+    height, so a layout bug fails the build instead of shipping.
 
-    No real-image option here on purpose: an SVG loaded via <img src=...>
-    is treated as opaque by the browser, so any <image href="..."> inside
-    it referencing an external URL silently fails to load, regardless of
-    which repo hosts it -- confirmed directly (three real screenshots all
-    rendered as broken-image fallback art, blown up and pixelated, not a
-    cropping bug). A placeholder label is the only option that actually
-    works in this architecture."""
+    No image or placeholder strip on purpose (dropped per direct
+    feedback -- tried real screenshots first, which don't work at all in
+    this architecture since an SVG loaded via <img src=...> is opaque to
+    the browser and can't load its own external <image> refs; the
+    placeholder-label strip that replaced them wasn't liked either).
+    Just the real content, no top banner."""
     out = []
     out.append(f'  <g transform="translate({x},{y})">')
     out.append(f'    <rect class="card" width="{w}" height="{h}" rx="2"/>')
 
-    body_top = 0
-    if placeholder_label:
-        out.append(f'    <rect class="placeholder" width="{w}" height="{image_h}"/>')
-        out.append(f'    <text class="phtxt" x="{w/2:.0f}" y="{image_h/2+4:.0f}" text-anchor="middle" style="font-size:11px">{esc(placeholder_label)}</text>')
-        body_top = image_h
-
     pad = 18
     inner_w = w - pad * 2
-    ty = body_top + 24
+    ty = 24
     out.append(f'    <circle class="dot" cx="{pad+8}" cy="{ty-4}" r="3" fill="{color}" style="animation-delay:-{delay}s"/>')
     out.append(f'    <text class="idx" x="{pad+20}" y="{ty}" style="font-size:11px">{esc(idx)}</text>')
 
@@ -250,53 +236,41 @@ def build_projects_all():
     cards = [
         dict(idx="FILE 01", title="Aura — AI UX Auditor",
              desc="Real WCAG contrast math on sampled pixels, a real saliency model for attention — one AI call for the one thing code can't judge.",
-             tags="NEXT.JS · CONVEX · GEMINI", color="#c9a84c",
-             placeholder="[ LIVE REPORT CARD ]"),
+             tags="NEXT.JS · CONVEX · GEMINI", color="#c9a84c"),
         dict(idx="FILE 02", title="Exploit-Path Tracer",
              desc="Traces multi-hop taint paths and tells a real sanitizer apart from one that only looks like it.",
-             tags="SEMGREP · LANGGRAPH · GROQ", color="#a78bfa",
-             placeholder="[ LIVE SCAN TRACE ]"),
+             tags="SEMGREP · LANGGRAPH · GROQ", color="#a78bfa"),
         dict(idx="FILE 03", title="Deposition Contradiction Finder",
              desc="Catches real contradictions in witness testimony, and correctly dismisses the ones that only sound like a match.",
-             tags="SUPABASE · LANGGRAPH · GROQ", color="#c9a84c",
-             placeholder="[ LIVE TIMELINE ]"),
+             tags="SUPABASE · LANGGRAPH · GROQ", color="#c9a84c"),
         dict(idx="FILE 04", title="DetectifAI",
              desc="Real-time CCTV threat detection — weapons, intrusions, behavioral anomalies. YOLO + CLIP vision-language + FaceNet identity tracking.",
-             tags="YOLO · CLIP · FASTAPI", color="#a78bfa",
-             placeholder="[ DEMO VIDEO ]"),
+             tags="YOLO · CLIP · FASTAPI", color="#a78bfa"),
         dict(idx="FILE 05", title="Multi-Tenant Agentic RAG",
              desc="Tenant isolation, ACL enforcement, PII masking, prompt-injection detection. Passed red-team evaluation.",
-             tags="LANGCHAIN · CREWAI", color="#c9a84c",
-             placeholder="[ SECURITY / RAG ]"),
+             tags="LANGCHAIN · CREWAI", color="#c9a84c"),
         dict(idx="FILE 06", title="CrisSim — Disaster Response",
              desc="Heterogeneous agents simulating earthquake response, medic and drone coordination. Benchmarks ReAct, Reflexion, and Chain-of-Thought.",
-             tags="LANGGRAPH · REACT", color="#a78bfa",
-             placeholder="[ MULTI-AGENT SIM ]"),
+             tags="LANGGRAPH · REACT", color="#a78bfa"),
         dict(idx="FILE 07", title="Agentic Airspace Copilot",
              desc="Live flight-anomaly detection on real OpenSky API data. CrewAI + LangGraph orchestration with MCP tool integration.",
-             tags="CREWAI · MCP", color="#c9a84c",
-             placeholder="[ LIVE FLIGHT DATA ]"),
+             tags="CREWAI · MCP", color="#c9a84c"),
         dict(idx="FILE 08", title="AI Video Narrator",
              desc="Local text-to-speech and captions, entirely in-browser as WASM. Nothing leaves the tab.",
-             tags="KOKORO · FFMPEG.WASM", color="#a78bfa",
-             placeholder="[ LOCAL TTS ]"),
+             tags="KOKORO · FFMPEG.WASM", color="#a78bfa"),
         dict(idx="FILE 09", title="Fact-Check Overlay",
              desc="Select a claim, get a sourced verdict — both sides shown if the claim is genuinely contested.",
-             tags="GROQ · TAVILY", color="#c9a84c",
-             placeholder="[ CHROME EXTENSION ]"),
+             tags="GROQ · TAVILY", color="#c9a84c"),
         dict(idx="FILE 10", title="Clickbait Decoder",
              desc="Names the manipulation tactic in a headline and scores it, before you spend the click.",
-             tags="GROQ", color="#a78bfa",
-             placeholder="[ CHROME EXTENSION ]"),
+             tags="GROQ", color="#a78bfa"),
         dict(idx="FILE 11", title="AI Slop Blocker",
              desc="Removes AI-generated posts from a feed as you scroll, without breaking the page's own React state.",
-             tags="GROQ VISION", color="#c9a84c",
-             placeholder="[ CHROME EXTENSION ]"),
+             tags="GROQ VISION", color="#c9a84c"),
     ]
 
     cw, gap, cols, margin = 273, 12, 4, 24
-    image_h = 150
-    card_h = 360
+    card_h = 210
     rows = -(-len(cards) // cols)
     w = margin * 2 + cw * cols + gap * (cols - 1)
     h = margin + rows * card_h + (rows - 1) * gap + margin
@@ -309,8 +283,6 @@ def build_projects_all():
         out.extend(draw_card(
             x, y, cw, card_h, c["idx"], c["title"], c["desc"], c["tags"], c["color"],
             delay=i * 0.3,
-            image_h=image_h if c.get("placeholder") else 0,
-            placeholder_label=c.get("placeholder"),
         ))
     out.append("</svg>\n")
     open("projects-all.svg", "w", encoding="utf-8").write("\n".join(out))

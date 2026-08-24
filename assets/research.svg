@@ -19,15 +19,9 @@
       @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
       .barfill { animation: grow 1.4s ease-out both; }
       @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-      .placeholder { fill: url(#phGrad); }
-      .phtxt { font-family: 'JBM',monospace; font-weight: 500; fill: #e8eaf2; letter-spacing: 1px; opacity: 0.85; }
 
 
     </style>
-    <linearGradient id="phGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a1f38"/>
-      <stop offset="100%" stop-color="#0a0818"/>
-    </linearGradient>
 
   </defs>
   <rect class="bg" width="1200" height="580"/>
