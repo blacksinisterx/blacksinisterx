@@ -51,8 +51,8 @@
 
   <path class="brk" d="M 16 14 L 16 28 M 16 14 L 30 14"/>
   <path class="brk" d="M 1184 14 L 1184 28 M 1184 14 L 1170 14"/>
-  <text class="hnum" x="64" y="34">MISSION-05 ::</text>
-  <text class="htitle" x="64" y="63">SIGNAL TRACE</text>
+  <text class="hnum" x="64" y="34">MISSION-06 ::</text>
+  <text class="htitle" x="64" y="63">SECURE CHANNEL</text>
   <line class="tick" x1="0" y1="75" x2="1200" y2="75"/>
   <rect class="pulse" x="0" y="73.5" width="50" height="2.5" fill="url(#pulseGrad)"/>
 </svg>

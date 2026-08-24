@@ -12,25 +12,13 @@
 
 <img src="assets/header-01.svg" width="100%" alt="MISSION-01 :: DOSSIER FILE" />
 
-I build agents that have to prove their reasoning, not just state a conclusion — a security scanner that has to tell a real sanitizer from a cosmetic one, a UX auditor that runs actual WCAG math instead of asking an LLM to guess a contrast ratio, a contradiction-finder that has to tell "sounds similar" apart from "actually conflicts."
-
-Every project below shipped with a real bug log — the dead ends, the wrong assumptions, the thing that broke on real data and why. That log is usually more interesting than the feature.
+<img src="assets/dossier.svg" width="100%" alt="B.S. Artificial Intelligence, FAST-NUCES — CGPA 3.62/4.0, Dean's List, Rector's List — Teaching Assistant, Agentic AI — Available June 2026" />
 
 <br/>
 
 <img src="assets/header-02.svg" width="100%" alt="MISSION-02 :: SKILL MATRIX" />
 
-<div align="center">
-
-![Skills](https://skillicons.dev/icons?i=nextjs,react,ts,js,python,tailwind,nodejs,git,github,vercel)
-
-</div>
-
-<div align="center">
-
-`LangGraph` · `Convex` · `Supabase` · `Groq` · `Gemini` · `Playwright` · `Semgrep` · `PaddleOCR` · `TensorFlow` · `GitHub Actions` · `Chrome Manifest V3`
-
-</div>
+<img src="assets/skills.svg" width="100%" alt="Core Languages, AI/ML Frameworks, Agentic & GenAI, Tools & Infrastructure" />
 
 <br/>
 
@@ -65,15 +53,42 @@ Catches real contradictions in witness testimony — and, shown here, correctly 
 </tr>
 </table>
 
+<img src="assets/projects-ops.svg" width="100%" alt="DetectifAI, Multi-Tenant Agentic RAG, CrisSim disaster response, Agentic Airspace Copilot" />
+
+<div align="center">
+<sub>[DetectifAI](https://drive.google.com/file/d/1ZpO-nzMJUw8zg00oiZCB-ZGMa06_vxou/view) (demo) · [Multi-Tenant Agentic RAG](https://github.com/blacksinisterx/Multi-Tenant-Agentic-RAG-System) · [CrisSim](https://github.com/blacksinisterx/CrisSim-Multi-Agent-Simulation) · [Agentic Airspace Copilot](https://github.com/sincera315/Assignment3_Agentic_AI_N8N)</sub>
+</div>
+
+<br/>
+
 <a href="https://github.com/blacksinisterx/Ai-Video-Narrator"><img src="assets/projects-secondary.svg" width="100%" alt="AI Video Narrator, Fact-Check Overlay, Clickbait Decoder, AI Slop Blocker" /></a>
 
 <div align="center">
 <sub>[AI Video Narrator](https://github.com/blacksinisterx/Ai-Video-Narrator) · [Fact-Check Overlay](https://github.com/blacksinisterx/Fact-Checker) · [Clickbait Decoder](https://github.com/blacksinisterx/Clickbait-Decoder) · [AI Slop Blocker](https://github.com/blacksinisterx/Ai-Slop-Blocker)</sub>
 </div>
 
+<div align="center">
+
+<br/>
+
+**ADDITIONAL FIELD WORK**
+[Story2Audio](https://github.com/blacksinisterx/Story2Audio) · [MPCount](https://github.com/blacksinisterx/Computer-Vision-Project-Inventory-Count) · [Agentic OCR](https://github.com/blacksinisterx/Agentic-OCR) · Flight Delay Prediction (96% accuracy) · [Virtual Painter](https://github.com/blacksinisterx/Virtual-Painter) · [FAQ Chatbot](https://github.com/blacksinisterx/FAQ-Chatbot) · [GANs & VAEs](https://github.com/blacksinisterx/Generative-AI-Assignment-2-GANs-VAEs)
+
+</div>
+
 <br/>
 
 <img src="assets/header-04.svg" width="100%" alt="MISSION-04 :: INTEL REPORT" />
+
+<img src="assets/research.svg" width="100%" alt="Independent and course research: agentic AI security, federated unlearning, AI safety benchmarking, data-to-text synthesis, CNN architecture" />
+
+<div align="center">
+<sub>[Agentic AI Safety Audit](https://github.com/blacksinisterx/Agentic-AI-Safety-Audit) · [Federated Unlearning](https://github.com/blacksinisterx/federated-unlearning-multi-attack-evaluation) · Multi-Turn Safety Benchmark · Seed-Free Data-to-Text Synthesis · [CIFAR-100 CNN](https://github.com/blacksinisterx/Artificial-Neural-Network-Project)</sub>
+</div>
+
+<br/>
+
+<img src="assets/header-05.svg" width="100%" alt="MISSION-05 :: SIGNAL TRACE" />
 
 <div align="center">
 
@@ -96,7 +111,7 @@ Catches real contradictions in witness testimony — and, shown here, correctly 
 
 <br/>
 
-<img src="assets/header-05.svg" width="100%" alt="MISSION-05 :: SECURE CHANNEL" />
+<img src="assets/header-06.svg" width="100%" alt="MISSION-06 :: SECURE CHANNEL" />
 
 <div align="center">
 
