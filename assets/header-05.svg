@@ -8,12 +8,12 @@
 
       .bg { fill: #0d0f1a; }
       .card { fill: #0f111d; stroke: #1e2235; stroke-width: 1; }
-      .title { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; fill: #7c5cbf; }
+      .title { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; fill: #e8d08a; }
       .body { font-family: 'JBM',monospace; font-weight: 500; fill: #a0aac4; }
       .label { font-family: 'JBM',monospace; font-weight: 500; fill: #e8eaf2; }
       .idx { font-family: 'JBM',monospace; font-weight: 500; fill: #6b7a99; letter-spacing: 2px; }
-      .tag { font-family: 'JBM',monospace; font-weight: 500; fill: #c9a84c; letter-spacing: 0.5px; }
-      .pct { font-family: 'JBM',monospace; font-weight: 500; fill: #a78bfa; }
+      .tag { font-family: 'JBM',monospace; font-weight: 500; fill: #a78bfa; letter-spacing: 0.5px; }
+      .pct { font-family: 'JBM',monospace; font-weight: 500; fill: #c9a84c; }
       .stat { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; }
       .dot { animation: pulse 2.2s ease-in-out infinite; transform-origin: center; }
       @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
@@ -21,9 +21,9 @@
       @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 
-      .hnum { font-family: 'JBM',monospace; font-weight: 500; font-size: 15px; fill: #a78bfa; letter-spacing: 2px; }
+      .hnum { font-family: 'JBM',monospace; font-weight: 500; font-size: 15px; fill: #c9a84c; letter-spacing: 2px; }
       .htitle { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; font-size: 30px; fill: #e8eaf2; letter-spacing: 0.5px; }
-      .brk { stroke: #a78bfa; stroke-width: 2; fill: none; opacity: 0.85; }
+      .brk { stroke: #c9a84c; stroke-width: 2; fill: none; opacity: 0.85; }
       .tick { stroke: #2a3050; stroke-width: 1; }
       .pulse { animation: travel 4.5s linear infinite; }
       @keyframes travel {
@@ -36,9 +36,9 @@
     </style>
 
     <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#7c5cbf" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#c9a84c" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e8d08a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
     </linearGradient>
     
   </defs>

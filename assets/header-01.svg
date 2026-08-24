@@ -16,7 +16,7 @@
         font-family: 'JBM', 'Cascadia Code', monospace;
         font-weight: 500;
         font-size: 15px;
-        fill: #a78bfa;
+        fill: #c9a84c;
         letter-spacing: 2px;
       }
       .title {
@@ -26,7 +26,7 @@
         fill: #e8eaf2;
         letter-spacing: 0.5px;
       }
-      .brk { stroke: #a78bfa; stroke-width: 2; fill: none; opacity: 0.85; }
+      .brk { stroke: #c9a84c; stroke-width: 2; fill: none; opacity: 0.85; }
       .tick { stroke: #2a3050; stroke-width: 1; }
       .pulse { animation: travel 4.5s linear infinite; }
       @keyframes travel {
@@ -37,9 +37,9 @@
       }
     </style>
     <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#7c5cbf" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#c9a84c" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e8d08a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
     </linearGradient>
   </defs>
 

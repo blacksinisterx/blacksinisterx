@@ -8,12 +8,12 @@
 
       .bg { fill: #0d0f1a; }
       .card { fill: #0f111d; stroke: #1e2235; stroke-width: 1; }
-      .title { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; fill: #7c5cbf; }
+      .title { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; fill: #e8d08a; }
       .body { font-family: 'JBM',monospace; font-weight: 500; fill: #a0aac4; }
       .label { font-family: 'JBM',monospace; font-weight: 500; fill: #e8eaf2; }
       .idx { font-family: 'JBM',monospace; font-weight: 500; fill: #6b7a99; letter-spacing: 2px; }
-      .tag { font-family: 'JBM',monospace; font-weight: 500; fill: #c9a84c; letter-spacing: 0.5px; }
-      .pct { font-family: 'JBM',monospace; font-weight: 500; fill: #a78bfa; }
+      .tag { font-family: 'JBM',monospace; font-weight: 500; fill: #a78bfa; letter-spacing: 0.5px; }
+      .pct { font-family: 'JBM',monospace; font-weight: 500; fill: #c9a84c; }
       .stat { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; }
       .dot { animation: pulse 2.2s ease-in-out infinite; transform-origin: center; }
       @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
@@ -34,16 +34,16 @@
   <text class="body" x="24" y="191" style="font-size:16px">Every project below shipped with a real bug log — the dead ends, the</text>
   <text class="body" x="24" y="218" style="font-size:16px">wrong assumptions, the thing that broke on real data and why. That log</text>
   <text class="body" x="24" y="245" style="font-size:16px">is usually more interesting than the feature.</text>
-  <circle class="dot" cx="30" cy="286" r="3" fill="#a78bfa"/>
+  <circle class="dot" cx="30" cy="286" r="3" fill="#c9a84c"/>
   <text class="idx" x="44" y="290" style="font-size:11px">DEGREE</text>
   <text class="label" x="180" y="290" style="font-size:13px">B.S. Artificial Intelligence — FAST-NUCES, Islamabad</text>
-  <circle class="dot" cx="30" cy="312" r="3" fill="#c9a84c"/>
+  <circle class="dot" cx="30" cy="312" r="3" fill="#a78bfa"/>
   <text class="idx" x="44" y="316" style="font-size:11px">STANDING</text>
   <text class="label" x="180" y="316" style="font-size:13px">CGPA 3.62 / 4.0 — Dean's List ×5 · Rector's List</text>
-  <circle class="dot" cx="30" cy="338" r="3" fill="#a78bfa"/>
+  <circle class="dot" cx="30" cy="338" r="3" fill="#c9a84c"/>
   <text class="idx" x="44" y="342" style="font-size:11px">ROLE</text>
   <text class="label" x="180" y="342" style="font-size:13px">Teaching Assistant — Agentic AI (Jan–Jun 2026)</text>
-  <circle class="dot" cx="30" cy="364" r="3" fill="#c9a84c"/>
+  <circle class="dot" cx="30" cy="364" r="3" fill="#a78bfa"/>
   <text class="idx" x="44" y="368" style="font-size:11px">AVAILABLE</text>
   <text class="label" x="180" y="368" style="font-size:13px">June 2026</text>
 </svg>

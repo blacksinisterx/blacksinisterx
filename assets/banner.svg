@@ -24,7 +24,7 @@
         font-family: 'JBM', 'Cascadia Code', monospace;
         font-weight: 500;
         font-size: 20px;
-        fill: #c9a84c;
+        fill: #a78bfa;
         letter-spacing: 5px;
       }
       .mono-sm {
@@ -37,18 +37,18 @@
       .mono-gold {
         font-family: 'JBM', 'Cascadia Code', monospace;
         font-weight: 500;
-        fill: #a78bfa;
+        fill: #c9a84c;
         font-size: 12px;
         letter-spacing: 2px;
       }
       .seal-text {
         font-family: 'JBM', 'Cascadia Code', monospace;
         font-size: 11.5px;
-        fill: #c9a84c;
+        fill: #a78bfa;
         letter-spacing: 3.5px;
       }
 
-      .grid-line { stroke: #e8d08a; stroke-width: 1; opacity: 0.10; }
+      .grid-line { stroke: #7c5cbf; stroke-width: 1; opacity: 0.10; }
 
       .scan { animation: sweep 5.5s ease-in-out infinite; }
       @keyframes sweep {
@@ -80,7 +80,7 @@
         to   { transform: rotate(360deg); }
       }
 
-      .brk { stroke: #a78bfa; stroke-width: 2; fill: none; opacity: 0.85; }
+      .brk { stroke: #c9a84c; stroke-width: 2; fill: none; opacity: 0.85; }
 
       /* role title cycle: 4 independent, non-overlapping keyframes over a
          shared 12.8s loop -- each role owns exactly one 25% quarter, with
@@ -122,25 +122,25 @@
     </style>
 
     <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7c5cbf"/>
-      <stop offset="55%" stop-color="#a78bfa"/>
-      <stop offset="100%" stop-color="#c9a84c"/>
+      <stop offset="0%" stop-color="#e8d08a"/>
+      <stop offset="55%" stop-color="#c9a84c"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
     </linearGradient>
 
     <radialGradient id="glow" cx="78%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#2a2010" stop-opacity="0.6"/>
+      <stop offset="0%" stop-color="#3d2d7a" stop-opacity="0.6"/>
       <stop offset="100%" stop-color="#07080f" stop-opacity="0"/>
     </radialGradient>
 
     <radialGradient id="glow2" cx="8%" cy="95%" r="45%">
-      <stop offset="0%" stop-color="#3d2d7a" stop-opacity="0.7"/>
+      <stop offset="0%" stop-color="#2a2010" stop-opacity="0.7"/>
       <stop offset="100%" stop-color="#07080f" stop-opacity="0"/>
     </radialGradient>
 
     <linearGradient id="scanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#7c5cbf" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#c9a84c" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#e8d08a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
     </linearGradient>
 
     <clipPath id="frame">
@@ -177,7 +177,7 @@
     <!-- classification stamp, cycling status -->
     <g transform="translate(64, 52)">
       <rect x="0" y="0" width="192" height="26" fill="none" stroke="#2a3050" stroke-width="1"/>
-      <circle class="pulse-dot" cx="14" cy="13" r="4" fill="#a78bfa"/>
+      <circle class="pulse-dot" cx="14" cy="13" r="4" fill="#c9a84c"/>
       <text class="mono-gold status status0" x="28" y="17">CLEARANCE :: SCANNING</text>
       <text class="mono-gold status status1" x="28" y="17">CLEARANCE :: ANALYZING</text>
       <text class="mono-gold status status2" x="28" y="17">CLEARANCE :: VERIFIED</text>
@@ -200,14 +200,14 @@
     <!-- rotating seal, top right -->
     <g transform="translate(1080, 90)">
       <g class="spin">
-        <circle r="44" fill="none" stroke="#e8d08a" stroke-width="1" opacity="0.55"/>
-        <circle r="36" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.4" stroke-dasharray="2 4"/>
+        <circle r="44" fill="none" stroke="#7c5cbf" stroke-width="1" opacity="0.55"/>
+        <circle r="36" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.4" stroke-dasharray="2 4"/>
         <path id="sealPath" d="M -44 0 A 44 44 0 1 1 -43.9 3" fill="none"/>
         <text class="seal-text">
           <textPath href="#sealPath" startOffset="0%">BUREAU FILE • CLASSIFIED • BUREAU FILE • CLASSIFIED •</textPath>
         </text>
       </g>
-      <circle r="4" fill="#7c5cbf"/>
+      <circle r="4" fill="#e8d08a"/>
     </g>
 
     <!-- footer file meta -->

@@ -31,6 +31,12 @@ Project and research cards are individual SVG files (project-NN.svg,
 research-NN.svg), not one combined grid image -- a single combined image
 can only carry one link, so every card used to open the raw SVG on click
 instead of the project. README.md wraps each in its own <a href>.
+
+Dark mode's gold-primary/purple-secondary palette is deliberate and
+untouched -- do not recolor the dark assets. Only LIGHT_MAP (see below)
+swaps which family reads as primary, because the same amount of gold
+that pops on near-black looked flat against a light/parchment
+background.
 """
 import html
 
@@ -435,54 +441,31 @@ def build_header(num, title, out_path, dur=4.5):
 # replace over an already-rendered dark file produces a correct light
 # file without re-deriving any layout, and leaves the dark file (the one
 # actually referenced by default in the README) byte-for-byte untouched.
+# Gold reads great as the dark-mode primary (kept exactly as designed --
+# do not touch the dark palette here) but the same amount of gold looked
+# flat against a light/parchment background, per direct feedback. So
+# light mode alone swaps which family is "primary": lavender/purple
+# takes the light-mode-prominent slots gold's own hex used to map to,
+# and gold takes the slots purple's hex used to map to. Only these two
+# tiers are swapped (gold's {mid, light, glow} <-> purple's {mid,
+# secondary, glow}); every neutral bg/text/border tone below is
+# unaffected and still tracks the dark source 1:1.
 LIGHT_MAP = {
     "#07080f": "#f6f2e4",  # banner bg (near-black)        -> parchment bg
     "#0d0f1a": "#f6f2e4",  # main bg                        -> parchment bg
     "#0f111d": "#fffdf7",  # card fill                      -> paper card
     "#1e2235": "#ddd3b0",  # card stroke / bar track        -> tan border
-    "#e8d08a": "#7a5a12",  # title text (light gold)        -> deep gold-brown
+    "#e8d08a": "#9b7ee0",  # dark: title text (light gold)  -> light: mid purple/lavender
     "#a0aac4": "#4a4636",  # body text (light slate)        -> warm charcoal
     "#e8eaf2": "#1c1810",  # label/heading text (near-white)-> near-black
     "#6b7a99": "#8a7f5e",  # idx text (slate-blue)          -> warm gray-brown
-    "#a78bfa": "#6d46b8",  # purple accent                  -> deep purple
-    "#c9a84c": "#a8873a",  # gold accent                    -> deep gold (matches snake-light)
-    "#7c5cbf": "#9b7ee0",  # banner secondary purple        -> mid purple
-    "#3d2d7a": "#ceb8f5",  # banner purple glow (dark bg)   -> pastel purple glow
-    "#2a2010": "#f2e0a8",  # banner gold glow (dark bg)     -> pastel gold glow
+    "#a78bfa": "#a8873a",  # dark: purple accent            -> light: deep gold (matches snake-light)
+    "#c9a84c": "#6d46b8",  # dark: gold accent              -> light: deep purple/lavender
+    "#7c5cbf": "#7a5a12",  # dark: banner secondary purple  -> light: deep gold-brown
+    "#3d2d7a": "#f2e0a8",  # dark: banner purple glow       -> light: pastel gold glow
+    "#2a2010": "#ceb8f5",  # dark: banner gold glow         -> light: pastel purple glow
     "#2a3050": "#d8cfb0",  # header tick/divider line       -> tan divider
 }
-
-
-# ------------------------------------------------------------ accent swap
-# Gold was the primary/most-visible accent everywhere (title text, header
-# numerals, the alternating odd-numbered cards, the banner's main sweep)
-# and it wasn't reading as vivid enough against the near-black background
-# -- direct feedback. Rather than hand-edit every one of the ~15 places
-# gold/purple literals appear (BASE_CSS, each header's extra CSS, both
-# card lists, dossier creds, skills quadrants, banner gradients), this
-# swaps the two 3-shade families wherever they appear in an already-
-# rendered file: gold's {primary, light, glow} triplet trades places with
-# purple's {primary, secondary, glow} triplet. Purple/lavender becomes
-# the prominent color, gold becomes the alternate. Runs on every dark
-# file, including banner.svg/header-01..04.svg which have no generator
-# function in this script (hand-built, edited in place).
-# ponytail: only swaps these 6 known hex literals -- a new accent color
-# added later needs its own swap pair added to ACCENT_SWAP_PAIRS below.
-import re
-
-ACCENT_SWAP_PAIRS = [("c9a84c", "a78bfa"), ("e8d08a", "7c5cbf"), ("2a2010", "3d2d7a")]
-ACCENT_SWAP = {}
-for _a, _b in ACCENT_SWAP_PAIRS:
-    ACCENT_SWAP[_a] = _b
-    ACCENT_SWAP[_b] = _a
-_accent_re = re.compile("|".join(ACCENT_SWAP.keys()))
-
-
-def recolor_accents(path):
-    text = open(path, encoding="utf-8").read()
-    text = _accent_re.sub(lambda m: ACCENT_SWAP[m.group(0)], text)
-    open(path, "w", encoding="utf-8").write(text)
-    print("recolored", path)
 
 
 def make_light_variant(path):
@@ -508,7 +491,5 @@ ASSET_FILES = (
     + [f"project-{n:02d}.svg" for n in range(1, 12)]
     + [f"research-{n:02d}.svg" for n in range(1, 6)]
 )
-for f in ASSET_FILES:
-    recolor_accents(f)
 for f in ASSET_FILES:
     make_light_variant(f)
