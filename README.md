@@ -8,29 +8,33 @@
 
 </div>
 
-<img src="assets/divider.svg" width="100%" alt="" />
+<br/>
 
-## MISSION-01 :: DOSSIER FILE
+<img src="assets/header-01.svg" width="100%" alt="MISSION-01 :: DOSSIER FILE" />
 
 I build agents that have to prove their reasoning, not just state a conclusion — a security scanner that has to tell a real sanitizer from a cosmetic one, a UX auditor that runs actual WCAG math instead of asking an LLM to guess a contrast ratio, a contradiction-finder that has to tell "sounds similar" apart from "actually conflicts."
 
 Every project below shipped with a real bug log — the dead ends, the wrong assumptions, the thing that broke on real data and why. That log is usually more interesting than the feature.
 
-<img src="assets/divider.svg" width="100%" alt="" />
+<br/>
 
-## MISSION-02 :: SKILL MATRIX
+<img src="assets/header-02.svg" width="100%" alt="MISSION-02 :: SKILL MATRIX" />
 
 <div align="center">
 
-![Next.js](https://skillicons.dev/icons?i=nextjs,react,ts,js,python,tailwind,nodejs,git,github,vercel)
+![Skills](https://skillicons.dev/icons?i=nextjs,react,ts,js,python,tailwind,nodejs,git,github,vercel)
 
 </div>
 
+<div align="center">
+
 `LangGraph` · `Convex` · `Supabase` · `Groq` · `Gemini` · `Playwright` · `Semgrep` · `PaddleOCR` · `TensorFlow` · `GitHub Actions` · `Chrome Manifest V3`
 
-<img src="assets/divider.svg" width="100%" alt="" />
+</div>
 
-## MISSION-03 :: OPERATION LOG
+<br/>
+
+<img src="assets/header-03.svg" width="100%" alt="MISSION-03 :: OPERATION LOG" />
 
 <table>
 <tr>
@@ -61,19 +65,15 @@ Catches real contradictions in witness testimony — and, shown here, correctly 
 </tr>
 </table>
 
+<a href="https://github.com/blacksinisterx/Ai-Video-Narrator"><img src="assets/projects-secondary.svg" width="100%" alt="AI Video Narrator, Fact-Check Overlay, Clickbait Decoder, AI Slop Blocker" /></a>
+
 <div align="center">
-
-| | | | |
-|---|---|---|---|
-| **[AI Video Narrator](https://github.com/blacksinisterx/Ai-Video-Narrator)** | **[Fact-Check Overlay](https://github.com/blacksinisterx/Fact-Checker)** | **[Clickbait Decoder](https://github.com/blacksinisterx/Clickbait-Decoder)** | **[AI Slop Blocker](https://github.com/blacksinisterx/Ai-Slop-Blocker)** |
-| Local TTS + captions, entirely in-browser as WASM | Select a claim, get a sourced verdict — both sides if it's genuinely contested | Names the manipulation tactic in a headline before you click | Removes AI slop from a feed without breaking the page's own React state |
-| `Kokoro` `ffmpeg.wasm` | `Groq` `Tavily` | `Groq` | `Groq Vision` |
-
+<sub>[AI Video Narrator](https://github.com/blacksinisterx/Ai-Video-Narrator) · [Fact-Check Overlay](https://github.com/blacksinisterx/Fact-Checker) · [Clickbait Decoder](https://github.com/blacksinisterx/Clickbait-Decoder) · [AI Slop Blocker](https://github.com/blacksinisterx/Ai-Slop-Blocker)</sub>
 </div>
 
-<img src="assets/divider.svg" width="100%" alt="" />
+<br/>
 
-## MISSION-04 :: INTEL REPORT
+<img src="assets/header-04.svg" width="100%" alt="MISSION-04 :: INTEL REPORT" />
 
 <div align="center">
 
@@ -94,9 +94,9 @@ Catches real contradictions in witness testimony — and, shown here, correctly 
 
 <sub>The language/repo stats card (github-readme-stats.vercel.app) is down at the time of writing — `503 DEPLOYMENT_PAUSED` on the shared public instance, a known issue with that free service, not something broken here. [Self-hosting it](https://vercel.com/import/project?template=https://github.com/anuraghazra/github-readme-stats) takes about two minutes if it's still down when you read this.</sub>
 
-<img src="assets/divider.svg" width="100%" alt="" />
+<br/>
 
-## MISSION-05 :: SECURE CHANNEL
+<img src="assets/header-05.svg" width="100%" alt="MISSION-05 :: SECURE CHANNEL" />
 
 <div align="center">
 
