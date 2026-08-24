@@ -26,15 +26,17 @@
 
 <div align="center">
 
-<img src="assets/projects-all.svg" width="100%" alt="11 engineering projects: Aura, Exploit-Path Tracer, Deposition Contradiction Finder, DetectifAI, Multi-Tenant Agentic RAG, CrisSim, Agentic Airspace Copilot, AI Video Narrator, Fact-Check Overlay, Clickbait Decoder, AI Slop Blocker" />
-
-<sub>[Aura](https://github.com/blacksinisterx/Ai-UX-Auditor) ([live](https://ai-ux-auditor-inky.vercel.app/)) · [Exploit-Path Tracer](https://github.com/blacksinisterx/Exploit-Path-Tracer) ([live](https://exploit-path-tracer.vercel.app/)) · [Deposition Contradiction Finder](https://github.com/blacksinisterx/Deposition-Contradiction-Finder) ([live](https://deposition-contradiction-finder.vercel.app/)) · [DetectifAI](https://drive.google.com/file/d/1ZpO-nzMJUw8zg00oiZCB-ZGMa06_vxou/view) (demo)</sub>
-
-<br/>
-
-<sub>[Multi-Tenant Agentic RAG](https://github.com/blacksinisterx/Multi-Tenant-Agentic-RAG-System) · [CrisSim](https://github.com/blacksinisterx/CrisSim-Multi-Agent-Simulation) · [Agentic Airspace Copilot](https://github.com/sincera315/Assignment3_Agentic_AI_N8N) · [AI Video Narrator](https://github.com/blacksinisterx/Ai-Video-Narrator) · [Fact-Check Overlay](https://github.com/blacksinisterx/Fact-Checker) · [Clickbait Decoder](https://github.com/blacksinisterx/Clickbait-Decoder) · [AI Slop Blocker](https://github.com/blacksinisterx/Ai-Slop-Blocker)</sub>
+<sub>click a card — repo if it has one, else the live deploy, else the demo</sub>
 
 <br/><br/>
+
+| | | | |
+|---|---|---|---|
+| [<img src="assets/project-01.svg" width="100%" alt="Aura — AI UX Auditor" />](https://github.com/blacksinisterx/Ai-UX-Auditor) | [<img src="assets/project-02.svg" width="100%" alt="Exploit-Path Tracer" />](https://github.com/blacksinisterx/Exploit-Path-Tracer) | [<img src="assets/project-03.svg" width="100%" alt="Deposition Contradiction Finder" />](https://github.com/blacksinisterx/Deposition-Contradiction-Finder) | [<img src="assets/project-04.svg" width="100%" alt="DetectifAI" />](https://drive.google.com/file/d/1ZpO-nzMJUw8zg00oiZCB-ZGMa06_vxou/view) |
+| [<img src="assets/project-05.svg" width="100%" alt="Multi-Tenant Agentic RAG" />](https://github.com/blacksinisterx/Multi-Tenant-Agentic-RAG-System) | [<img src="assets/project-06.svg" width="100%" alt="CrisSim — Disaster Response" />](https://github.com/blacksinisterx/CrisSim-Multi-Agent-Simulation) | [<img src="assets/project-07.svg" width="100%" alt="Agentic Airspace Copilot" />](https://github.com/sincera315/Assignment3_Agentic_AI_N8N) | [<img src="assets/project-08.svg" width="100%" alt="AI Video Narrator" />](https://github.com/blacksinisterx/Ai-Video-Narrator) |
+| [<img src="assets/project-09.svg" width="100%" alt="Fact-Check Overlay" />](https://github.com/blacksinisterx/Fact-Checker) | [<img src="assets/project-10.svg" width="100%" alt="Clickbait Decoder" />](https://github.com/blacksinisterx/Clickbait-Decoder) | [<img src="assets/project-11.svg" width="100%" alt="AI Slop Blocker" />](https://github.com/blacksinisterx/Ai-Slop-Blocker) | |
+
+<br/>
 
 **ADDITIONAL FIELD WORK**
 <br/>
@@ -46,11 +48,12 @@
 
 <img src="assets/header-04.svg" width="100%" alt="MISSION-04 :: INTEL REPORT" />
 
-<img src="assets/research.svg" width="100%" alt="Independent and course research: agentic AI security, federated unlearning, AI safety benchmarking, data-to-text synthesis, CNN architecture" />
-
 <div align="center">
 
-<sub>[Agentic AI Safety Audit](https://github.com/blacksinisterx/Agentic-AI-Safety-Audit) · [Federated Unlearning](https://github.com/blacksinisterx/federated-unlearning-multi-attack-evaluation) · Multi-Turn Safety Benchmark · Seed-Free Data-to-Text Synthesis · [CIFAR-100 CNN](https://github.com/blacksinisterx/Artificial-Neural-Network-Project)</sub>
+| | | |
+|---|---|---|
+| [<img src="assets/research-01.svg" width="100%" alt="Security Audit of Agentic AI Frameworks" />](https://github.com/blacksinisterx/Agentic-AI-Safety-Audit) | [<img src="assets/research-02.svg" width="100%" alt="FAST Federated Unlearning" />](https://github.com/blacksinisterx/federated-unlearning-multi-attack-evaluation) | [<img src="assets/research-03.svg" width="100%" alt="Multi-Turn AI Safety Benchmark" />](https://storm-bureau-portfolio.vercel.app/) |
+| [<img src="assets/research-04.svg" width="100%" alt="Seed-Free Data-to-Text Synthesis" />](https://storm-bureau-portfolio.vercel.app/) | [<img src="assets/research-05.svg" width="100%" alt="CIFAR-100 CNN Architecture" />](https://github.com/blacksinisterx/Artificial-Neural-Network-Project) | |
 
 </div>
 

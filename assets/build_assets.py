@@ -12,19 +12,25 @@ business in git history). Regenerate them first:
   base64 -w0 syne-bold.woff2 > syne-bold.b64
   base64 -w0 jbm-medium.woff2 > jbm-medium.b64
 
-Text overflow (twice, in earlier versions of this script) came from
-guessing pixel widths per character and getting the guess wrong -- once
-on the dossier credential chips (packed horizontally with a width formula
-that undercounted), once on a card title ("AGENTIC AIRSPACE") that was
-hand-split with \\n at a guessed breakpoint that didn't actually fit.
+Text overflow (three times, in earlier versions of this script) came
+from guessing pixel widths per character and getting the guess wrong --
+the dossier credential chips (packed horizontally with a width formula
+that undercounted), a card title ("AGENTIC AIRSPACE") hand-split with
+\\n at a guessed breakpoint, and "Fact-Check Overlay" still overflowing
+at a 0.72em/char Syne estimate that measured as "fitting" by under 5px.
 Fixed at the root with wrap_words() below: JetBrains Mono is genuinely
-monospace (0.6em/char is its documented advance width, not a guess), and
-Syne's bold uppercase width is estimated generously (0.72em/char) so the
-wrapper wraps a little early rather than risk overflowing. Every card is
-now built through one function (draw_card) that wraps against the card's
-real available width instead of hand-picking line breaks, and asserts
-content fits vertically at build time instead of relying on eyeballing a
-screenshot.
+monospace (0.6em/char is its documented advance width, not a guess),
+Syne's bold uppercase width is now estimated at 0.85em/char, and
+wrap_words() asserts every line still fits after wrapping instead of
+trusting the estimate blindly. Every card is now built through one
+function (draw_card) that wraps against the card's real available width
+instead of hand-picking line breaks, and asserts content fits vertically
+at build time instead of relying on eyeballing a screenshot.
+
+Project and research cards are individual SVG files (project-NN.svg,
+research-NN.svg), not one combined grid image -- a single combined image
+can only carry one link, so every card used to open the raw SVG on click
+instead of the project. README.md wraps each in its own <a href>.
 """
 import html
 
@@ -72,10 +78,16 @@ def esc(s):
 
 
 # JetBrains Mono's advance width is documented/exact at 0.6em per glyph --
-# not a guess. Syne's bold uppercase average is estimated generously at
-# 0.72em/char (real value varies per letter; this errs toward wrapping
-# early rather than overflowing).
-CHAR_EM = {"jbm": 0.6, "syne": 0.72}
+# not a guess. Syne's bold uppercase average was first estimated at
+# 0.72em/char and that was STILL wrong -- "Fact-Check Overlay" measured
+# at 232.6px against a 237px budget under that estimate, comfortably
+# "fit" by the math, and visibly overflowed the real card anyway. Real
+# rendered width for a bold uppercase-heavy display face runs wider than
+# a single average suggests. Bumped to 0.85em/char, and wrap_lines()
+# below double-checks every line against that same figure after wrapping
+# (not just during it), so a line that still doesn't fit fails the build
+# with the actual offending text named, instead of shipping quietly.
+CHAR_EM = {"jbm": 0.6, "syne": 0.85}
 
 
 def wrap_words(text, max_width_px, font_size, font="jbm"):
@@ -91,6 +103,16 @@ def wrap_words(text, max_width_px, font_size, font="jbm"):
             cur = w
     if cur:
         lines.append(cur)
+
+    for line in lines:
+        actual_w = len(line) * char_w
+        if actual_w > max_width_px + 0.5:
+            raise ValueError(
+                f"wrap_words: line {line!r} estimated at {actual_w:.0f}px "
+                f"still exceeds the {max_width_px:.0f}px budget after "
+                f"wrapping (font={font}, size={font_size}) -- shorten it "
+                f"or widen the card."
+            )
     return lines
 
 
@@ -137,6 +159,18 @@ def draw_card(x, y, w, h, idx, title, desc, tags, color, delay=0.0):
     out.append(f'    <text class="tag" x="{pad}" y="{tag_y}" style="font-size:9.5px">{esc(tags)}</text>')
     out.append("  </g>")
     return out
+
+
+def build_card_file(path, w, h, idx, title, desc, tags, color):
+    """One standalone card SVG, individually clickable when wrapped in its
+    own <a href> in the README -- a single combined grid image can't have
+    per-region links in plain markdown, which is why cards were unclickable
+    (opening the raw SVG) before this split."""
+    out = [svg_open(w, h)]
+    out.extend(draw_card(0, 0, w, h, idx, title, desc, tags, color))
+    out.append("</svg>\n")
+    open(path, "w", encoding="utf-8").write("\n".join(out))
+    print("wrote", path)
 
 
 # ---------------------------------------------------------------- dossier.svg
@@ -227,124 +261,134 @@ def build_skills():
     print("wrote skills.svg")
 
 
-# ------------------------------------------------------------- projects-all.svg
+# -------------------------------------------------------- project-NN.svg
+# Link priority per project, as requested: real repo first, else the live
+# deployment, else (for DetectifAI, which has neither) the real demo
+# video -- falling further back to the portfolio only when nothing more
+# specific exists.
 def build_projects_all():
-    """All 11 Operation Log projects through the same draw_card() --
-    replaces the old HTML table + projects-ops.svg + projects-secondary.svg,
-    which were three different hand-coded layouts (the actual source of
-    the "these don't match" complaint)."""
     cards = [
         dict(idx="FILE 01", title="Aura — AI UX Auditor",
              desc="Real WCAG contrast math on sampled pixels, a real saliency model for attention — one AI call for the one thing code can't judge.",
-             tags="NEXT.JS · CONVEX · GEMINI", color="#c9a84c"),
+             tags="NEXT.JS · CONVEX · GEMINI", color="#c9a84c",
+             link="https://github.com/blacksinisterx/Ai-UX-Auditor"),
         dict(idx="FILE 02", title="Exploit-Path Tracer",
              desc="Traces multi-hop taint paths and tells a real sanitizer apart from one that only looks like it.",
-             tags="SEMGREP · LANGGRAPH · GROQ", color="#a78bfa"),
+             tags="SEMGREP · LANGGRAPH · GROQ", color="#a78bfa",
+             link="https://github.com/blacksinisterx/Exploit-Path-Tracer"),
         dict(idx="FILE 03", title="Deposition Contradiction Finder",
              desc="Catches real contradictions in witness testimony, and correctly dismisses the ones that only sound like a match.",
-             tags="SUPABASE · LANGGRAPH · GROQ", color="#c9a84c"),
+             tags="SUPABASE · LANGGRAPH · GROQ", color="#c9a84c",
+             link="https://github.com/blacksinisterx/Deposition-Contradiction-Finder"),
         dict(idx="FILE 04", title="DetectifAI",
              desc="Real-time CCTV threat detection — weapons, intrusions, behavioral anomalies. YOLO + CLIP vision-language + FaceNet identity tracking.",
-             tags="YOLO · CLIP · FASTAPI", color="#a78bfa"),
+             tags="YOLO · CLIP · FASTAPI", color="#a78bfa",
+             link="https://drive.google.com/file/d/1ZpO-nzMJUw8zg00oiZCB-ZGMa06_vxou/view"),
         dict(idx="FILE 05", title="Multi-Tenant Agentic RAG",
              desc="Tenant isolation, ACL enforcement, PII masking, prompt-injection detection. Passed red-team evaluation.",
-             tags="LANGCHAIN · CREWAI", color="#c9a84c"),
+             tags="LANGCHAIN · CREWAI", color="#c9a84c",
+             link="https://github.com/blacksinisterx/Multi-Tenant-Agentic-RAG-System"),
         dict(idx="FILE 06", title="CrisSim — Disaster Response",
-             desc="Heterogeneous agents simulating earthquake response, medic and drone coordination. Benchmarks ReAct, Reflexion, and Chain-of-Thought.",
-             tags="LANGGRAPH · REACT", color="#a78bfa"),
+             desc="Heterogeneous agents simulating earthquake response — medic and drone coordination, benchmarking ReAct, Reflexion, and CoT.",
+             tags="LANGGRAPH · REACT", color="#a78bfa",
+             link="https://github.com/blacksinisterx/CrisSim-Multi-Agent-Simulation"),
         dict(idx="FILE 07", title="Agentic Airspace Copilot",
              desc="Live flight-anomaly detection on real OpenSky API data. CrewAI + LangGraph orchestration with MCP tool integration.",
-             tags="CREWAI · MCP", color="#c9a84c"),
+             tags="CREWAI · MCP", color="#c9a84c",
+             link="https://github.com/sincera315/Assignment3_Agentic_AI_N8N"),
         dict(idx="FILE 08", title="AI Video Narrator",
              desc="Local text-to-speech and captions, entirely in-browser as WASM. Nothing leaves the tab.",
-             tags="KOKORO · FFMPEG.WASM", color="#a78bfa"),
+             tags="KOKORO · FFMPEG.WASM", color="#a78bfa",
+             link="https://github.com/blacksinisterx/Ai-Video-Narrator"),
         dict(idx="FILE 09", title="Fact-Check Overlay",
              desc="Select a claim, get a sourced verdict — both sides shown if the claim is genuinely contested.",
-             tags="GROQ · TAVILY", color="#c9a84c"),
+             tags="GROQ · TAVILY", color="#c9a84c",
+             link="https://github.com/blacksinisterx/Fact-Checker"),
         dict(idx="FILE 10", title="Clickbait Decoder",
              desc="Names the manipulation tactic in a headline and scores it, before you spend the click.",
-             tags="GROQ", color="#a78bfa"),
+             tags="GROQ", color="#a78bfa",
+             link="https://github.com/blacksinisterx/Clickbait-Decoder"),
         dict(idx="FILE 11", title="AI Slop Blocker",
              desc="Removes AI-generated posts from a feed as you scroll, without breaking the page's own React state.",
-             tags="GROQ VISION", color="#c9a84c"),
+             tags="GROQ VISION", color="#c9a84c",
+             link="https://github.com/blacksinisterx/Ai-Slop-Blocker"),
     ]
 
-    cw, gap, cols, margin = 273, 12, 4, 24
-    card_h = 210
-    rows = -(-len(cards) // cols)
-    w = margin * 2 + cw * cols + gap * (cols - 1)
-    h = margin + rows * card_h + (rows - 1) * gap + margin
-
-    out = [svg_open(w, h)]
-    for i, c in enumerate(cards):
-        col, row = i % cols, i // cols
-        x = margin + col * (cw + gap)
-        y = margin + row * (card_h + gap)
-        out.extend(draw_card(
-            x, y, cw, card_h, c["idx"], c["title"], c["desc"], c["tags"], c["color"],
-            delay=i * 0.3,
-        ))
-    out.append("</svg>\n")
-    open("projects-all.svg", "w", encoding="utf-8").write("\n".join(out))
-    print(f"wrote projects-all.svg ({w}x{h})")
+    cw, ch = 273, 210
+    for i, c in enumerate(cards, start=1):
+        build_card_file(f"project-{i:02d}.svg", cw, ch, c["idx"], c["title"], c["desc"], c["tags"], c["color"])
+    return cards
 
 
-# -------------------------------------------------------------- research.svg
+# ------------------------------------------------------- research-NN.svg
+def draw_research_card(w, h, idx, title, stat, statdesc, desc, color):
+    """Same shape as draw_card() (dot+idx, wrapped title, then a headline
+    stat, statdesc and desc) but as its own function since research cards
+    carry a stat line project cards don't. Same build-time overflow
+    assertion as draw_card()."""
+    pad = 20
+    inner_w = w - pad * 2
+    out = [f'  <rect class="card" width="{w}" height="{h}" rx="2"/>']
+    out.append(f'  <circle class="dot" cx="22" cy="26" r="3.5" fill="{color}"/>')
+    out.append(f'  <text class="idx" x="34" y="30" style="font-size:12px">{esc(idx)}</text>')
+
+    ty = 58
+    for tl in wrap_words(title, inner_w, 16.5, "syne"):
+        out.append(f'  <text class="title" x="{pad}" y="{ty}" style="font-size:16.5px">{esc(tl)}</text>')
+        ty += 21
+
+    ty += 20
+    out.append(f'  <text class="stat" x="{pad}" y="{ty}" style="font-size:24px" fill="{color}">{esc(stat)}</text>')
+    ty += 20
+    for sl in wrap_words(statdesc, inner_w, 10.5, "jbm"):
+        out.append(f'  <text class="body" x="{pad}" y="{ty}" style="font-size:10.5px">{esc(sl)}</text>')
+        ty += 14
+
+    ty += 12
+    for dl in wrap_words(desc, inner_w, 10.5, "jbm"):
+        if ty > h - 10:
+            raise ValueError(
+                f"research card overflow: '{title}' content reaches y={ty} "
+                f"in a {h}px-tall card -- shorten the description or grow "
+                f"the card."
+            )
+        out.append(f'  <text class="body" x="{pad}" y="{ty}" style="font-size:10.5px;opacity:0.8">{esc(dl)}</text>')
+        ty += 15
+    return out
+
+
 def build_research():
-    w, h = 1200, 580
     items = [
-        ("FILE R1", "Security Audit of Agentic AI Frameworks", "0.90–1.00",
-         "attack success rate, multi-agent systems, even in secured configs",
-         "5 adversarial scenarios across LangChain, CrewAI, and multi-agent setups: prompt injection, tool injection, unauthorized execution, memory poisoning.",
-         "#c9a84c"),
-        ("FILE R2", "FAST Federated Unlearning", "95.02% → 0.0981",
-         "backdoor attack success rate, zero false positives",
-         "Extended the IEEE TNSE 2024 FAST framework across 3 attack types on 10 distributed clients, without full model retraining. 99% accuracy recovery.",
-         "#a78bfa"),
-        ("FILE R3", "Multi-Turn AI Safety Benchmark", "2.5×",
-         "more frequent context-accumulation attack success",
-         "Local eval across Llama3-8B, Hermes3-8B, Qwen2.5-7B via JailbreakBench and TruthfulQA. Introduced CARI, an original context-accumulation risk metric.",
-         "#c9a84c"),
-        ("FILE R4", "Seed-Free Data-to-Text Synthesis", "114.2%",
-         "of fully-supervised baseline, zero-shot",
-         "Zero-shot pipeline via Llama 3.1:8B across WebNLG, E2E, and WikiTableQuestions. Eliminates $5K–$50K of human annotation cost per dataset.",
-         "#a78bfa"),
-        ("FILE R5", "CIFAR-100 CNN Architecture", "68.01% → 93.34%",
-         "reproduced baseline vs. enhanced result",
-         "Reproduced Yang et al. (2023), then enhanced with residual attention and SE blocks for a +25.33% accuracy gain over the original baseline.",
-         "#c9a84c"),
+        dict(idx="FILE R1", title="Security Audit of Agentic AI Frameworks", stat="0.90–1.00",
+             statdesc="attack success rate, multi-agent systems, even in secured configs",
+             desc="5 adversarial scenarios across LangChain, CrewAI, and multi-agent setups: prompt injection, tool injection, unauthorized execution, memory poisoning.",
+             color="#c9a84c", link="https://github.com/blacksinisterx/Agentic-AI-Safety-Audit"),
+        dict(idx="FILE R2", title="FAST Federated Unlearning", stat="95.02% → 0.0981",
+             statdesc="backdoor attack success rate, zero false positives",
+             desc="Extended the IEEE TNSE 2024 FAST framework across 3 attack types on 10 distributed clients, without full model retraining. 99% accuracy recovery.",
+             color="#a78bfa", link="https://github.com/blacksinisterx/federated-unlearning-multi-attack-evaluation"),
+        dict(idx="FILE R3", title="Multi-Turn AI Safety Benchmark", stat="2.5×",
+             statdesc="more frequent context-accumulation attack success",
+             desc="Local eval across Llama3-8B, Hermes3-8B, Qwen2.5-7B via JailbreakBench and TruthfulQA. Introduced CARI, an original context-accumulation risk metric.",
+             color="#c9a84c", link="https://storm-bureau-portfolio.vercel.app/"),
+        dict(idx="FILE R4", title="Seed-Free Data-to-Text Synthesis", stat="114.2%",
+             statdesc="of fully-supervised baseline, zero-shot",
+             desc="Zero-shot pipeline via Llama 3.1:8B across WebNLG, E2E, and WikiTableQuestions. Eliminates $5K–$50K of human annotation cost per dataset.",
+             color="#a78bfa", link="https://storm-bureau-portfolio.vercel.app/"),
+        dict(idx="FILE R5", title="CIFAR-100 CNN Architecture", stat="68.01% → 93.34%",
+             statdesc="reproduced baseline vs. enhanced result",
+             desc="Reproduced Yang et al. (2023), then enhanced with residual attention and SE blocks for a +25.33% accuracy gain over the original baseline.",
+             color="#c9a84c", link="https://github.com/blacksinisterx/Artificial-Neural-Network-Project"),
     ]
     cw, ch = 376, 270
-    positions = [(24, 20), (412, 20), (800, 20), (24, 300), (412, 300)]
-    pad = 20
-
-    out = [svg_open(w, h)]
-    for (x, y), (fileno, title, stat, statdesc, desc, color) in zip(positions, items):
-        out.append(f'  <rect class="card" x="{x}" y="{y}" width="{cw}" height="{ch}" rx="2"/>')
-        out.append(f'  <circle class="dot" cx="{x+22}" cy="{y+26}" r="3.5" fill="{color}"/>')
-        out.append(f'  <text class="idx" x="{x+34}" y="{y+30}" style="font-size:12px">{fileno}</text>')
-
-        ty = y + 58
-        for tl in wrap_words(title, cw - pad * 2, 16.5, "syne"):
-            out.append(f'  <text class="title" x="{x+pad}" y="{ty}" style="font-size:16.5px">{esc(tl)}</text>')
-            ty += 21
-
-        ty += 20
-        out.append(f'  <text class="stat" x="{x+pad}" y="{ty}" style="font-size:24px" fill="{color}">{esc(stat)}</text>')
-        ty += 20
-        for sl in wrap_words(statdesc, cw - pad * 2, 10.5, "jbm"):
-            out.append(f'  <text class="body" x="{x+pad}" y="{ty}" style="font-size:10.5px">{esc(sl)}</text>')
-            ty += 14
-
-        ty += 12
-        for dl in wrap_words(desc, cw - pad * 2, 10.5, "jbm"):
-            if ty > y + ch - 10:
-                raise ValueError(f"research card overflow: '{title}'")
-            out.append(f'  <text class="body" x="{x+pad}" y="{ty}" style="font-size:10.5px;opacity:0.8">{esc(dl)}</text>')
-            ty += 15
-    out.append("</svg>\n")
-    open("research.svg", "w", encoding="utf-8").write("\n".join(out))
-    print("wrote research.svg")
+    for i, it in enumerate(items, start=1):
+        path = f"research-{i:02d}.svg"
+        out = [svg_open(cw, ch)]
+        out.extend(draw_research_card(cw, ch, it["idx"], it["title"], it["stat"], it["statdesc"], it["desc"], it["color"]))
+        out.append("</svg>\n")
+        open(path, "w", encoding="utf-8").write("\n".join(out))
+        print("wrote", path)
+    return items
 
 
 # --------------------------------------------------------------- headers
