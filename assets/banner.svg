@@ -20,12 +20,12 @@
         fill: url(#titleGrad);
         letter-spacing: 1px;
       }
-      .subtitle {
+      .role {
         font-family: 'JBM', 'Cascadia Code', monospace;
         font-weight: 500;
-        font-size: 19px;
+        font-size: 20px;
         fill: #a78bfa;
-        letter-spacing: 6px;
+        letter-spacing: 5px;
       }
       .mono-sm {
         font-family: 'JBM', 'Cascadia Code', monospace;
@@ -50,9 +50,7 @@
 
       .grid-line { stroke: #7c5cbf; stroke-width: 1; opacity: 0.10; }
 
-      .scan {
-        animation: sweep 5.5s ease-in-out infinite;
-      }
+      .scan { animation: sweep 5.5s ease-in-out infinite; }
       @keyframes sweep {
         0%   { transform: translateY(-40px); opacity: 0; }
         8%   { opacity: 0.9; }
@@ -83,6 +81,61 @@
       }
 
       .brk { stroke: #c9a84c; stroke-width: 2; fill: none; opacity: 0.85; }
+
+      /* role title cycle: 4 independent, non-overlapping keyframes over a
+         shared 12.8s loop -- each role owns exactly one 25% quarter, with
+         its own fade in/out inside that quarter. (A single shared keyframe
+         driven by negative animation-delay was tried first and was a real
+         bug: the math for where a role's "on" phase needs to sit in local
+         keyframe-% depends on that role's own delay, so 3 of 4 roles ended
+         up visible at once. Verified by hand here instead of assumed.) */
+      .role { animation-duration: 12.8s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; }
+      .role0 { animation-name: roleFade0; }
+      .role1 { animation-name: roleFade1; }
+      .role2 { animation-name: roleFade2; }
+      .role3 { animation-name: roleFade3; }
+      @keyframes roleFade0 {
+        0%, 1.5%    { opacity: 0; transform: translateY(4px); }
+        3%, 22%     { opacity: 1; transform: translateY(0); }
+        23.5%, 100% { opacity: 0; transform: translateY(-4px); }
+      }
+      @keyframes roleFade1 {
+        0%, 25%       { opacity: 0; transform: translateY(4px); }
+        26.5%, 47%    { opacity: 1; transform: translateY(0); }
+        48.5%, 100%   { opacity: 0; transform: translateY(-4px); }
+      }
+      @keyframes roleFade2 {
+        0%, 50%       { opacity: 0; transform: translateY(4px); }
+        51.5%, 72%    { opacity: 1; transform: translateY(0); }
+        73.5%, 100%   { opacity: 0; transform: translateY(-4px); }
+      }
+      @keyframes roleFade3 {
+        0%, 75%     { opacity: 0; transform: translateY(4px); }
+        76.5%, 97%  { opacity: 1; transform: translateY(0); }
+        98.5%, 100% { opacity: 0; transform: translateY(-4px); }
+      }
+
+      /* status word cycle inside the stamp -- same independent-keyframe
+         fix as the role cycle above, for the same reason. */
+      .status { animation-duration: 6s; animation-timing-function: steps(1); animation-iteration-count: infinite; }
+      .status0 { animation-name: statusFade0; }
+      .status1 { animation-name: statusFade1; }
+      .status2 { animation-name: statusFade2; }
+      @keyframes statusFade0 { 0%, 33.2%     { opacity: 1; } 33.3%, 100%   { opacity: 0; } }
+      @keyframes statusFade1 { 0%, 33.3%     { opacity: 0; } 33.4%, 66.5%  { opacity: 1; } 66.6%, 100% { opacity: 0; } }
+      @keyframes statusFade2 { 0%, 66.6%     { opacity: 0; } 66.7%, 100%   { opacity: 1; } }
+
+      /* signal bars, staggered heights pulsing like an EQ */
+      .bar { animation: eq 1.4s ease-in-out infinite; transform-origin: bottom; }
+      .bar0 { animation-delay: 0s; }
+      .bar1 { animation-delay: -0.2s; }
+      .bar2 { animation-delay: -0.4s; }
+      .bar3 { animation-delay: -0.6s; }
+      .bar4 { animation-delay: -0.8s; }
+      @keyframes eq {
+        0%, 100% { transform: scaleY(0.35); }
+        50% { transform: scaleY(1); }
+      }
     </style>
 
     <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -92,7 +145,12 @@
     </linearGradient>
 
     <radialGradient id="glow" cx="78%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#3d2d7a" stop-opacity="0.55"/>
+      <stop offset="0%" stop-color="#3d2d7a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#07080f" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow2" cx="8%" cy="95%" r="45%">
+      <stop offset="0%" stop-color="#2a2010" stop-opacity="0.7"/>
       <stop offset="100%" stop-color="#07080f" stop-opacity="0"/>
     </radialGradient>
 
@@ -110,6 +168,7 @@
   <g clip-path="url(#frame)">
     <rect class="bg" width="1200" height="320"/>
     <rect width="1200" height="320" fill="url(#glow)"/>
+    <rect width="1200" height="320" fill="url(#glow2)"/>
 
     <!-- circuit grid -->
     <g class="grid-line">
@@ -119,6 +178,8 @@
       <line x1="1140" y1="0" x2="1140" y2="320"/>
       <line x1="900" y1="0" x2="900" y2="320"/>
       <line x1="960" y1="0" x2="960" y2="320"/>
+      <line x1="0" y1="120" x2="200" y2="120"/>
+      <line x1="1000" y1="200" x2="1200" y2="200"/>
     </g>
 
     <!-- scanline sweep -->
@@ -130,19 +191,37 @@
     <path class="brk" d="M 24 300 L 24 276 M 24 300 L 48 300"/>
     <path class="brk" d="M 1176 300 L 1176 276 M 1176 300 L 1152 300"/>
 
-    <!-- classification stamp -->
+    <!-- classification stamp, cycling status -->
     <g transform="translate(64, 52)">
-      <rect x="0" y="0" width="182" height="26" fill="none" stroke="#2a3050" stroke-width="1"/>
+      <rect x="0" y="0" width="192" height="26" fill="none" stroke="#2a3050" stroke-width="1"/>
       <circle class="pulse-dot" cx="14" cy="13" r="4" fill="#c9a84c"/>
-      <text class="mono-gold" x="28" y="17">CLEARANCE :: ACTIVE</text>
+      <text class="mono-gold status status0" x="28" y="17">CLEARANCE :: SCANNING</text>
+      <text class="mono-gold status status1" x="28" y="17">CLEARANCE :: ANALYZING</text>
+      <text class="mono-gold status status2" x="28" y="17">CLEARANCE :: VERIFIED</text>
+    </g>
+
+    <!-- signal bars, top right of stamp row -->
+    <g transform="translate(272, 58)">
+      <rect class="bar bar0" x="0"  y="8" width="3" height="12" fill="#7c5cbf"/>
+      <rect class="bar bar1" x="6"  y="8" width="3" height="12" fill="#7c5cbf"/>
+      <rect class="bar bar2" x="12" y="8" width="3" height="12" fill="#a78bfa"/>
+      <rect class="bar bar3" x="18" y="8" width="3" height="12" fill="#7c5cbf"/>
+      <rect class="bar bar4" x="24" y="8" width="3" height="12" fill="#7c5cbf"/>
     </g>
 
     <!-- title -->
     <g class="flicker">
       <text class="title" x="62" y="188">AIZA ALI</text>
     </g>
-    <text class="subtitle" x="66" y="222">AGENTIC AI ENGINEER</text>
-    <text class="mono-sm" x="66" y="252">AUTONOMOUS SYSTEMS  /  APPLIED ML  /  APPLIED SECURITY</text>
+
+    <!-- rotating role titles, one visible at a time -->
+    <g transform="translate(66, 222)">
+      <text class="role role0">AI / ML ENGINEER</text>
+      <text class="role role1">AGENTIC AI ENGINEER</text>
+      <text class="role role2">AI AUTOMATION ENGINEER</text>
+      <text class="role role3">GENERATIVE AI ENGINEER</text>
+    </g>
+    <text class="mono-sm" x="66" y="254">SEVEN SHIPPED AGENTS  /  ZERO STAGED DEMOS</text>
 
     <!-- rotating seal, top right -->
     <g transform="translate(1080, 90)">

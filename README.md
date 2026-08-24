@@ -34,57 +34,42 @@ Every project below shipped with a real bug log — the dead ends, the wrong ass
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
+<a href="https://ai-ux-auditor-inky.vercel.app/"><img src="https://raw.githubusercontent.com/blacksinisterx/Ai-UX-Auditor/main/docs/screenshots/03-report-card-headline.png" width="100%" alt="Aura report card" /></a>
 
 **[Aura — AI UX Auditor](https://github.com/blacksinisterx/Ai-UX-Auditor)**
-UX audits with real citations, not a vibe check — WCAG contrast math on sampled pixels, a real saliency model for attention, one AI call for the one thing code can't judge.
-`Next.js` `Convex` `Gemini` `Groq`
-[Live →](https://ai-ux-auditor-inky.vercel.app/)
+Real WCAG contrast math on sampled pixels, a real saliency model for attention — one AI call for the one thing code can't judge.
+`Next.js` `Convex` `Gemini` `Groq` — [Live →](https://ai-ux-auditor-inky.vercel.app/)
 
 </td>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
+<a href="https://exploit-path-tracer.vercel.app/"><img src="https://raw.githubusercontent.com/blacksinisterx/Exploit-Path-Tracer/master/docs/screenshots/07-false-positive.png" width="100%" alt="Exploit-Path Tracer dismissing a false positive" /></a>
 
 **[Exploit-Path Tracer](https://github.com/blacksinisterx/Exploit-Path-Tracer)**
-Traces real multi-hop taint paths through code and tells a real sanitizer apart from one that only looks like it — hop by hop, at the actual source.
-`Next.js` `Semgrep` `LangGraph` `Groq`
-[Live →](https://exploit-path-tracer.vercel.app/)
+Traces multi-hop taint paths and tells a real sanitizer apart from one that only looks like it — this is it correctly dismissing a false positive.
+`Semgrep` `LangGraph` `Groq` — [Live →](https://exploit-path-tracer.vercel.app/)
 
 </td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
+<a href="https://deposition-contradiction-finder.vercel.app/"><img src="https://raw.githubusercontent.com/blacksinisterx/Deposition-Contradiction-Finder/main/docs/screenshots/06-consistent.png" width="100%" alt="Deposition Contradiction Finder correctly dismissing a near-miss" /></a>
 
 **[Deposition Contradiction Finder](https://github.com/blacksinisterx/Deposition-Contradiction-Finder)**
-Reads witness testimony and catches real contradictions — and just as importantly, correctly dismisses the ones that only sound alike.
-`Next.js` `Supabase` `LangGraph` `Groq`
-[Live →](https://deposition-contradiction-finder.vercel.app/)
-
-</td>
-<td width="50%" valign="top">
-
-**[AI Video Narrator](https://github.com/blacksinisterx/Ai-Video-Narrator)**
-Local text-to-speech and captioning that runs entirely in the browser as WebAssembly. No account, no upload, nothing leaves the tab.
-`Kokoro TTS` `ffmpeg.wasm` `React`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-**[Fact-Check Overlay](https://github.com/blacksinisterx/Fact-Checker)**
-Select a claim, right-click, get a real verdict — and when a claim is genuinely contested, both sides with their own sources instead of a fake single answer.
-`Manifest V3` `Groq` `Tavily`
-
-</td>
-<td width="50%" valign="top">
-
-**[Clickbait Decoder](https://github.com/blacksinisterx/Clickbait-Decoder) · [AI Slop Blocker](https://github.com/blacksinisterx/Ai-Slop-Blocker)**
-One names the manipulation tactic in a headline before you click. The other removes AI-generated posts from a feed without breaking the page's own React state.
-`Manifest V3` `Groq Vision`
+Catches real contradictions in witness testimony — and, shown here, correctly dismisses one that only sounds like a match.
+`Supabase` `LangGraph` `Groq` — [Live →](https://deposition-contradiction-finder.vercel.app/)
 
 </td>
 </tr>
 </table>
+
+<div align="center">
+
+| | | | |
+|---|---|---|---|
+| **[AI Video Narrator](https://github.com/blacksinisterx/Ai-Video-Narrator)** | **[Fact-Check Overlay](https://github.com/blacksinisterx/Fact-Checker)** | **[Clickbait Decoder](https://github.com/blacksinisterx/Clickbait-Decoder)** | **[AI Slop Blocker](https://github.com/blacksinisterx/Ai-Slop-Blocker)** |
+| Local TTS + captions, entirely in-browser as WASM | Select a claim, get a sourced verdict — both sides if it's genuinely contested | Names the manipulation tactic in a headline before you click | Removes AI slop from a feed without breaking the page's own React state |
+| `Kokoro` `ffmpeg.wasm` | `Groq` `Tavily` | `Groq` | `Groq Vision` |
+
+</div>
 
 <img src="assets/divider.svg" width="100%" alt="" />
 
@@ -92,12 +77,11 @@ One names the manipulation tactic in a headline before you click. The other remo
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=blacksinisterx&show_icons=true&hide_border=true&bg_color=07080f&title_color=c9a84c&icon_color=a78bfa&text_color=a0aac4&hide=prs" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=blacksinisterx&layout=compact&hide_border=true&bg_color=07080f&title_color=c9a84c&text_color=a0aac4" alt="Top languages" />
+<img src="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=07080f&stroke=1e2235&ring=c9a84c&fire=e8d08a&currStreakLabel=e8eaf2&sideLabels=a0aac4&dates=6b7a99" alt="Streak stats" />
 
 <br/>
 
-<img src="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=07080f&stroke=1e2235&ring=c9a84c&fire=e8d08a&currStreakLabel=e8eaf2&sideLabels=a0aac4&dates=6b7a99" alt="Streak stats" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=blacksinisterx&bg_color=07080f&color=a0aac4&line=c9a84c&point=a78bfa&area=true&area_color=3d2d7a&hide_border=true&custom_title=CONTRIBUTION%20TELEMETRY" width="100%" alt="Contribution activity graph" />
 
 <br/><br/>
 
@@ -107,6 +91,8 @@ One names the manipulation tactic in a headline before you click. The other remo
 </picture>
 
 </div>
+
+<sub>The language/repo stats card (github-readme-stats.vercel.app) is down at the time of writing — `503 DEPLOYMENT_PAUSED` on the shared public instance, a known issue with that free service, not something broken here. [Self-hosting it](https://vercel.com/import/project?template=https://github.com/anuraghazra/github-readme-stats) takes about two minutes if it's still down when you read this.</sub>
 
 <img src="assets/divider.svg" width="100%" alt="" />
 
