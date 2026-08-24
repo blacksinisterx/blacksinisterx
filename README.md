@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src="assets/banner.svg" width="100%" alt="Aiza Ali — Bureau File" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg" />
+  <img src="assets/banner.svg" width="100%" alt="Aiza Ali — Bureau File" />
+</picture>
 
 <br/>
 
@@ -10,19 +13,34 @@
 
 <br/>
 
-<img src="assets/header-01.svg" width="100%" alt="MISSION-01 :: DOSSIER FILE" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-01-light.svg" />
+  <img src="assets/header-01.svg" width="100%" alt="MISSION-01 :: DOSSIER FILE" />
+</picture>
 
-<img src="assets/dossier.svg" width="100%" alt="B.S. Artificial Intelligence, FAST-NUCES — CGPA 3.62/4.0, Dean's List, Rector's List — Teaching Assistant, Agentic AI — Available June 2026" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/dossier-light.svg" />
+  <img src="assets/dossier.svg" width="100%" alt="B.S. Artificial Intelligence, FAST-NUCES — CGPA 3.62/4.0, Dean's List, Rector's List — Teaching Assistant, Agentic AI — Available June 2026" />
+</picture>
 
 <br/>
 
-<img src="assets/header-02.svg" width="100%" alt="MISSION-02 :: SKILL MATRIX" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-02-light.svg" />
+  <img src="assets/header-02.svg" width="100%" alt="MISSION-02 :: SKILL MATRIX" />
+</picture>
 
-<img src="assets/skills.svg" width="100%" alt="Core Languages, AI/ML Frameworks, Agentic & GenAI, Tools & Infrastructure" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/skills-light.svg" />
+  <img src="assets/skills.svg" width="100%" alt="Core Languages, AI/ML Frameworks, Agentic & GenAI, Tools & Infrastructure" />
+</picture>
 
 <br/>
 
-<img src="assets/header-03.svg" width="100%" alt="MISSION-03 :: OPERATION LOG" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-03-light.svg" />
+  <img src="assets/header-03.svg" width="100%" alt="MISSION-03 :: OPERATION LOG" />
+</picture>
 
 <div align="center">
 
@@ -32,9 +50,9 @@
 
 | | | | |
 |---|---|---|---|
-| [<img src="assets/project-01.svg" width="100%" alt="Aura — AI UX Auditor" />](https://github.com/blacksinisterx/Ai-UX-Auditor) | [<img src="assets/project-02.svg" width="100%" alt="Exploit-Path Tracer" />](https://github.com/blacksinisterx/Exploit-Path-Tracer) | [<img src="assets/project-03.svg" width="100%" alt="Deposition Contradiction Finder" />](https://github.com/blacksinisterx/Deposition-Contradiction-Finder) | [<img src="assets/project-04.svg" width="100%" alt="DetectifAI" />](https://drive.google.com/file/d/1ZpO-nzMJUw8zg00oiZCB-ZGMa06_vxou/view) |
-| [<img src="assets/project-05.svg" width="100%" alt="Multi-Tenant Agentic RAG" />](https://github.com/blacksinisterx/Multi-Tenant-Agentic-RAG-System) | [<img src="assets/project-06.svg" width="100%" alt="CrisSim — Disaster Response" />](https://github.com/blacksinisterx/CrisSim-Multi-Agent-Simulation) | [<img src="assets/project-07.svg" width="100%" alt="Agentic Airspace Copilot" />](https://github.com/sincera315/Assignment3_Agentic_AI_N8N) | [<img src="assets/project-08.svg" width="100%" alt="AI Video Narrator" />](https://github.com/blacksinisterx/Ai-Video-Narrator) |
-| [<img src="assets/project-09.svg" width="100%" alt="Fact-Check Overlay" />](https://github.com/blacksinisterx/Fact-Checker) | [<img src="assets/project-10.svg" width="100%" alt="Clickbait Decoder" />](https://github.com/blacksinisterx/Clickbait-Decoder) | [<img src="assets/project-11.svg" width="100%" alt="AI Slop Blocker" />](https://github.com/blacksinisterx/Ai-Slop-Blocker) | |
+| [<picture><source media="(prefers-color-scheme: light)" srcset="assets/project-01-light.svg"/><img src="assets/project-01.svg" width="100%" alt="Aura — AI UX Auditor"/></picture>](https://github.com/blacksinisterx/Ai-UX-Auditor) | [<picture><source media="(prefers-color-scheme: light)" srcset="assets/project-02-light.svg"/><img src="assets/project-02.svg" width="100%" alt="Exploit-Path Tracer"/></picture>](https://github.com/blacksinisterx/Exploit-Path-Tracer) | [<picture><source media="(prefers-color-scheme: light)" srcset="assets/project-03-light.svg"/><img src="assets/project-03.svg" width="100%" alt="Deposition Contradiction Finder"/></picture>](https://github.com/blacksinisterx/Deposition-Contradiction-Finder) | [<picture><source media="(prefers-color-scheme: light)" srcset="assets/project-04-light.svg"/><img src="assets/project-04.svg" width="100%" alt="DetectifAI"/></picture>](https://drive.google.com/file/d/1ZpO-nzMJUw8zg00oiZCB-ZGMa06_vxou/view) |
+| [<picture><source media="(prefers-color-scheme: light)" srcset="assets/project-05-light.svg"/><img src="assets/project-05.svg" width="100%" alt="Multi-Tenant Agentic RAG"/></picture>](https://github.com/blacksinisterx/Multi-Tenant-Agentic-RAG-System) | [<picture><source media="(prefers-color-scheme: light)" srcset="assets/project-06-light.svg"/><img src="assets/project-06.svg" width="100%" alt="CrisSim — Disaster Response"/></picture>](https://github.com/blacksinisterx/CrisSim-Multi-Agent-Simulation) | [<picture><source media="(prefers-color-scheme: light)" srcset="assets/project-07-light.svg"/><img src="assets/project-07.svg" width="100%" alt="Agentic Airspace Copilot"/></picture>](https://github.com/sincera315/Assignment3_Agentic_AI_N8N) | [<picture><source media="(prefers-color-scheme: light)" srcset="assets/project-08-light.svg"/><img src="assets/project-08.svg" width="100%" alt="AI Video Narrator"/></picture>](https://github.com/blacksinisterx/Ai-Video-Narrator) |
+| [<picture><source media="(prefers-color-scheme: light)" srcset="assets/project-09-light.svg"/><img src="assets/project-09.svg" width="100%" alt="Fact-Check Overlay"/></picture>](https://github.com/blacksinisterx/Fact-Checker) | [<picture><source media="(prefers-color-scheme: light)" srcset="assets/project-10-light.svg"/><img src="assets/project-10.svg" width="100%" alt="Clickbait Decoder"/></picture>](https://github.com/blacksinisterx/Clickbait-Decoder) | [<picture><source media="(prefers-color-scheme: light)" srcset="assets/project-11-light.svg"/><img src="assets/project-11.svg" width="100%" alt="AI Slop Blocker"/></picture>](https://github.com/blacksinisterx/Ai-Slop-Blocker) | |
 
 <br/>
 
@@ -46,28 +64,40 @@
 
 <br/>
 
-<img src="assets/header-04.svg" width="100%" alt="MISSION-04 :: INTEL REPORT" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-04-light.svg" />
+  <img src="assets/header-04.svg" width="100%" alt="MISSION-04 :: INTEL REPORT" />
+</picture>
 
 <div align="center">
 
 | | | |
 |---|---|---|
-| [<img src="assets/research-01.svg" width="100%" alt="Security Audit of Agentic AI Frameworks" />](https://github.com/blacksinisterx/Agentic-AI-Safety-Audit) | [<img src="assets/research-02.svg" width="100%" alt="FAST Federated Unlearning" />](https://github.com/blacksinisterx/federated-unlearning-multi-attack-evaluation) | [<img src="assets/research-03.svg" width="100%" alt="Multi-Turn AI Safety Benchmark" />](https://storm-bureau-portfolio.vercel.app/) |
-| [<img src="assets/research-04.svg" width="100%" alt="Seed-Free Data-to-Text Synthesis" />](https://storm-bureau-portfolio.vercel.app/) | [<img src="assets/research-05.svg" width="100%" alt="CIFAR-100 CNN Architecture" />](https://github.com/blacksinisterx/Artificial-Neural-Network-Project) | |
+| [<picture><source media="(prefers-color-scheme: light)" srcset="assets/research-01-light.svg"/><img src="assets/research-01.svg" width="100%" alt="Security Audit of Agentic AI Frameworks"/></picture>](https://github.com/blacksinisterx/Agentic-AI-Safety-Audit) | [<picture><source media="(prefers-color-scheme: light)" srcset="assets/research-02-light.svg"/><img src="assets/research-02.svg" width="100%" alt="FAST Federated Unlearning"/></picture>](https://github.com/blacksinisterx/federated-unlearning-multi-attack-evaluation) | [<picture><source media="(prefers-color-scheme: light)" srcset="assets/research-03-light.svg"/><img src="assets/research-03.svg" width="100%" alt="Multi-Turn AI Safety Benchmark"/></picture>](https://storm-bureau-portfolio.vercel.app/) |
+| [<picture><source media="(prefers-color-scheme: light)" srcset="assets/research-04-light.svg"/><img src="assets/research-04.svg" width="100%" alt="Seed-Free Data-to-Text Synthesis"/></picture>](https://storm-bureau-portfolio.vercel.app/) | [<picture><source media="(prefers-color-scheme: light)" srcset="assets/research-05-light.svg"/><img src="assets/research-05.svg" width="100%" alt="CIFAR-100 CNN Architecture"/></picture>](https://github.com/blacksinisterx/Artificial-Neural-Network-Project) | |
 
 </div>
 
 <br/>
 
-<img src="assets/header-05.svg" width="100%" alt="MISSION-05 :: SIGNAL TRACE" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-05-light.svg" />
+  <img src="assets/header-05.svg" width="100%" alt="MISSION-05 :: SIGNAL TRACE" />
+</picture>
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=07080f&stroke=1e2235&ring=c9a84c&fire=e8d08a&currStreakLabel=e8eaf2&sideLabels=a0aac4&dates=6b7a99" alt="Streak stats" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=f6f2e4&stroke=ddd3b0&ring=a8873a&fire=7a5a12&currStreakLabel=1c1810&sideLabels=4a4636&dates=8a7f5e" />
+  <img src="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=07080f&stroke=1e2235&ring=c9a84c&fire=e8d08a&currStreakLabel=e8eaf2&sideLabels=a0aac4&dates=6b7a99" alt="Streak stats" />
+</picture>
 
 <br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=blacksinisterx&bg_color=07080f&color=a0aac4&line=c9a84c&point=a78bfa&area=true&area_color=3d2d7a&hide_border=true&custom_title=CONTRIBUTION%20TELEMETRY" width="100%" alt="Contribution activity graph" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=blacksinisterx&bg_color=f6f2e4&color=4a4636&line=a8873a&point=6d46b8&area=true&area_color=ceb8f5&hide_border=true&custom_title=CONTRIBUTION%20TELEMETRY" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=blacksinisterx&bg_color=07080f&color=a0aac4&line=c9a84c&point=a78bfa&area=true&area_color=3d2d7a&hide_border=true&custom_title=CONTRIBUTION%20TELEMETRY" width="100%" alt="Contribution activity graph" />
+</picture>
 
 <br/><br/>
 
@@ -82,7 +112,10 @@
 
 <br/>
 
-<img src="assets/header-06.svg" width="100%" alt="MISSION-06 :: SECURE CHANNEL" />
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-06-light.svg" />
+  <img src="assets/header-06.svg" width="100%" alt="MISSION-06 :: SECURE CHANNEL" />
+</picture>
 
 <div align="center">
 

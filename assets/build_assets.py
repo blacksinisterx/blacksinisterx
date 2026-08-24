@@ -425,9 +425,56 @@ def build_header(num, title, out_path, dur=4.5):
     print("wrote", out_path)
 
 
+# ------------------------------------------------------ light-mode variants
+# GitHub's own theme-context pattern (already used for the snake animation
+# below) is two static files switched by <picture>/<source media=...>, not
+# a media query inside the SVG itself. Every dark asset in this repo --
+# banner, headers, dossier, skills, project/research cards -- draws from
+# exactly the same ~14 hex colors, in CSS classes AND in literal fill/
+# stroke attributes, always the same string. That means a plain find/
+# replace over an already-rendered dark file produces a correct light
+# file without re-deriving any layout, and leaves the dark file (the one
+# actually referenced by default in the README) byte-for-byte untouched.
+LIGHT_MAP = {
+    "#07080f": "#f6f2e4",  # banner bg (near-black)        -> parchment bg
+    "#0d0f1a": "#f6f2e4",  # main bg                        -> parchment bg
+    "#0f111d": "#fffdf7",  # card fill                      -> paper card
+    "#1e2235": "#ddd3b0",  # card stroke / bar track        -> tan border
+    "#e8d08a": "#7a5a12",  # title text (light gold)        -> deep gold-brown
+    "#a0aac4": "#4a4636",  # body text (light slate)        -> warm charcoal
+    "#e8eaf2": "#1c1810",  # label/heading text (near-white)-> near-black
+    "#6b7a99": "#8a7f5e",  # idx text (slate-blue)          -> warm gray-brown
+    "#a78bfa": "#6d46b8",  # purple accent                  -> deep purple
+    "#c9a84c": "#a8873a",  # gold accent                    -> deep gold (matches snake-light)
+    "#7c5cbf": "#9b7ee0",  # banner secondary purple        -> mid purple
+    "#3d2d7a": "#ceb8f5",  # banner purple glow (dark bg)   -> pastel purple glow
+    "#2a2010": "#f2e0a8",  # banner gold glow (dark bg)     -> pastel gold glow
+    "#2a3050": "#d8cfb0",  # header tick/divider line       -> tan divider
+}
+
+
+def make_light_variant(path):
+    text = open(path, encoding="utf-8").read()
+    for dark, light in LIGHT_MAP.items():
+        text = text.replace(dark, light)
+    light_path = path.replace(".svg", "-light.svg")
+    open(light_path, "w", encoding="utf-8").write(text)
+    print("wrote", light_path)
+
+
 build_dossier()
 build_skills()
 build_projects_all()
 build_research()
 build_header("05", "SIGNAL TRACE", "header-05.svg")
 build_header("06", "SECURE CHANNEL", "header-06.svg")
+
+ASSET_FILES = (
+    ["banner.svg"]
+    + [f"header-{n:02d}.svg" for n in range(1, 7)]
+    + ["dossier.svg", "skills.svg"]
+    + [f"project-{n:02d}.svg" for n in range(1, 12)]
+    + [f"research-{n:02d}.svg" for n in range(1, 6)]
+)
+for f in ASSET_FILES:
+    make_light_variant(f)
