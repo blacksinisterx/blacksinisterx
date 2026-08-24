@@ -116,6 +116,8 @@ One names the manipulation tactic in a headline before you click. The other remo
 
 [![Portfolio](https://img.shields.io/badge/DOSSIER-storm--bureau--portfolio.vercel.app-c9a84c?style=flat-square&labelColor=07080f)](https://storm-bureau-portfolio.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GITHUB-%40blacksinisterx-a78bfa?style=flat-square&labelColor=07080f)](https://github.com/blacksinisterx)
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-aiza--ali--03--ai-c9a84c?style=flat-square&labelColor=07080f&logo=linkedin&logoColor=c9a84c)](https://www.linkedin.com/in/aiza-ali-03-ai/)
+[![Email](https://img.shields.io/badge/TRANSMIT-aiza.ali03%40gmail.com-a78bfa?style=flat-square&labelColor=07080f&logo=gmail&logoColor=a78bfa)](mailto:aiza.ali03@gmail.com)
 
 </div>
 
