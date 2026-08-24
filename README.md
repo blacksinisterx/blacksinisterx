@@ -24,59 +24,21 @@
 
 <img src="assets/header-03.svg" width="100%" alt="MISSION-03 :: OPERATION LOG" />
 
-<table>
-<tr>
-<td width="33%" valign="top">
-<a href="https://ai-ux-auditor-inky.vercel.app/"><img src="https://raw.githubusercontent.com/blacksinisterx/Ai-UX-Auditor/main/docs/screenshots/03-report-card-headline.png" width="100%" alt="Aura report card" /></a>
-
-**[Aura — AI UX Auditor](https://github.com/blacksinisterx/Ai-UX-Auditor)**
-Real WCAG contrast math on sampled pixels, a real saliency model for attention — one AI call for the one thing code can't judge.
-`Next.js` `Convex` `Gemini` `Groq` — [Live →](https://ai-ux-auditor-inky.vercel.app/)
-
-</td>
-<td width="33%" valign="top">
-<a href="https://exploit-path-tracer.vercel.app/"><img src="https://raw.githubusercontent.com/blacksinisterx/Exploit-Path-Tracer/master/docs/screenshots/07-false-positive.png" width="100%" alt="Exploit-Path Tracer dismissing a false positive" /></a>
-
-**[Exploit-Path Tracer](https://github.com/blacksinisterx/Exploit-Path-Tracer)**
-Traces multi-hop taint paths and tells a real sanitizer apart from one that only looks like it — this is it correctly dismissing a false positive.
-`Semgrep` `LangGraph` `Groq` — [Live →](https://exploit-path-tracer.vercel.app/)
-
-</td>
-<td width="33%" valign="top">
-<a href="https://deposition-contradiction-finder.vercel.app/"><img src="https://raw.githubusercontent.com/blacksinisterx/Deposition-Contradiction-Finder/main/docs/screenshots/06-consistent.png" width="100%" alt="Deposition Contradiction Finder correctly dismissing a near-miss" /></a>
-
-**[Deposition Contradiction Finder](https://github.com/blacksinisterx/Deposition-Contradiction-Finder)**
-Catches real contradictions in witness testimony — and, shown here, correctly dismisses one that only sounds like a match.
-`Supabase` `LangGraph` `Groq` — [Live →](https://deposition-contradiction-finder.vercel.app/)
-
-</td>
-</tr>
-</table>
-
-<img src="assets/projects-ops.svg" width="100%" alt="DetectifAI, Multi-Tenant Agentic RAG, CrisSim disaster response, Agentic Airspace Copilot" />
-
 <div align="center">
 
-<sub>[DetectifAI](https://drive.google.com/file/d/1ZpO-nzMJUw8zg00oiZCB-ZGMa06_vxou/view) (demo) · [Multi-Tenant Agentic RAG](https://github.com/blacksinisterx/Multi-Tenant-Agentic-RAG-System) · [CrisSim](https://github.com/blacksinisterx/CrisSim-Multi-Agent-Simulation) · [Agentic Airspace Copilot](https://github.com/sincera315/Assignment3_Agentic_AI_N8N)</sub>
+<img src="assets/projects-all.svg" width="100%" alt="11 engineering projects: Aura, Exploit-Path Tracer, Deposition Contradiction Finder, DetectifAI, Multi-Tenant Agentic RAG, CrisSim, Agentic Airspace Copilot, AI Video Narrator, Fact-Check Overlay, Clickbait Decoder, AI Slop Blocker" />
 
-</div>
+<sub>[Aura](https://github.com/blacksinisterx/Ai-UX-Auditor) ([live](https://ai-ux-auditor-inky.vercel.app/)) · [Exploit-Path Tracer](https://github.com/blacksinisterx/Exploit-Path-Tracer) ([live](https://exploit-path-tracer.vercel.app/)) · [Deposition Contradiction Finder](https://github.com/blacksinisterx/Deposition-Contradiction-Finder) ([live](https://deposition-contradiction-finder.vercel.app/)) · [DetectifAI](https://drive.google.com/file/d/1ZpO-nzMJUw8zg00oiZCB-ZGMa06_vxou/view) (demo)</sub>
 
 <br/>
 
-<a href="https://github.com/blacksinisterx/Ai-Video-Narrator"><img src="assets/projects-secondary.svg" width="100%" alt="AI Video Narrator, Fact-Check Overlay, Clickbait Decoder, AI Slop Blocker" /></a>
+<sub>[Multi-Tenant Agentic RAG](https://github.com/blacksinisterx/Multi-Tenant-Agentic-RAG-System) · [CrisSim](https://github.com/blacksinisterx/CrisSim-Multi-Agent-Simulation) · [Agentic Airspace Copilot](https://github.com/sincera315/Assignment3_Agentic_AI_N8N) · [AI Video Narrator](https://github.com/blacksinisterx/Ai-Video-Narrator) · [Fact-Check Overlay](https://github.com/blacksinisterx/Fact-Checker) · [Clickbait Decoder](https://github.com/blacksinisterx/Clickbait-Decoder) · [AI Slop Blocker](https://github.com/blacksinisterx/Ai-Slop-Blocker)</sub>
 
-<div align="center">
-
-<sub>[AI Video Narrator](https://github.com/blacksinisterx/Ai-Video-Narrator) · [Fact-Check Overlay](https://github.com/blacksinisterx/Fact-Checker) · [Clickbait Decoder](https://github.com/blacksinisterx/Clickbait-Decoder) · [AI Slop Blocker](https://github.com/blacksinisterx/Ai-Slop-Blocker)</sub>
-
-</div>
-
-<div align="center">
-
-<br/>
+<br/><br/>
 
 **ADDITIONAL FIELD WORK**
-[Story2Audio](https://github.com/blacksinisterx/Story2Audio) · [MPCount](https://github.com/blacksinisterx/Computer-Vision-Project-Inventory-Count) · [Agentic OCR](https://github.com/blacksinisterx/Agentic-OCR) · Flight Delay Prediction (96% accuracy) · [Virtual Painter](https://github.com/blacksinisterx/Virtual-Painter) · [FAQ Chatbot](https://github.com/blacksinisterx/FAQ-Chatbot) · [GANs & VAEs](https://github.com/blacksinisterx/Generative-AI-Assignment-2-GANs-VAEs)
+<br/>
+<sub>[Story2Audio](https://github.com/blacksinisterx/Story2Audio) · [MPCount](https://github.com/blacksinisterx/Computer-Vision-Project-Inventory-Count) · [Agentic OCR](https://github.com/blacksinisterx/Agentic-OCR) · Flight Delay Prediction (96% accuracy) · [Virtual Painter](https://github.com/blacksinisterx/Virtual-Painter) · [FAQ Chatbot](https://github.com/blacksinisterx/FAQ-Chatbot) · [GANs & VAEs](https://github.com/blacksinisterx/Generative-AI-Assignment-2-GANs-VAEs)</sub>
 
 </div>
 

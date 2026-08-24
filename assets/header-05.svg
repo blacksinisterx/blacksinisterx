@@ -9,19 +9,18 @@
       .bg { fill: #0d0f1a; }
       .card { fill: #0f111d; stroke: #1e2235; stroke-width: 1; }
       .title { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; fill: #e8d08a; }
-      .titlew { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; fill: #e8eaf2; }
       .body { font-family: 'JBM',monospace; font-weight: 500; fill: #a0aac4; }
       .label { font-family: 'JBM',monospace; font-weight: 500; fill: #e8eaf2; }
       .idx { font-family: 'JBM',monospace; font-weight: 500; fill: #6b7a99; letter-spacing: 2px; }
       .tag { font-family: 'JBM',monospace; font-weight: 500; fill: #a78bfa; letter-spacing: 0.5px; }
       .pct { font-family: 'JBM',monospace; font-weight: 500; fill: #c9a84c; }
       .stat { font-family: 'SyneB','Trebuchet MS',sans-serif; font-weight: 800; }
-      .chip { fill: none; stroke: #2a3050; stroke-width: 1; }
-      .chiptxt { font-family: 'JBM',monospace; font-weight: 500; fill: #c9a84c; letter-spacing: 1px; }
       .dot { animation: pulse 2.2s ease-in-out infinite; transform-origin: center; }
       @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
       .barfill { animation: grow 1.4s ease-out both; }
       @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+      .placeholder { fill: url(#phGrad); }
+      .phtxt { font-family: 'JBM',monospace; font-weight: 500; fill: #e8eaf2; letter-spacing: 1px; opacity: 0.85; }
 
 
       .hnum { font-family: 'JBM',monospace; font-weight: 500; font-size: 15px; fill: #c9a84c; letter-spacing: 2px; }
@@ -37,17 +36,19 @@
       }
     
     </style>
-  </defs>
-  <rect class="bg" width="1200" height="76"/>
+    <linearGradient id="phGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1f38"/>
+      <stop offset="100%" stop-color="#0a0818"/>
+    </linearGradient>
 
-
-  <defs>
     <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#c9a84c" stop-opacity="0"/>
       <stop offset="50%" stop-color="#e8d08a" stop-opacity="1"/>
       <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
     </linearGradient>
+    
   </defs>
+  <rect class="bg" width="1200" height="76"/>
 
   <path class="brk" d="M 16 14 L 16 28 M 16 14 L 30 14"/>
   <path class="brk" d="M 1184 14 L 1184 28 M 1184 14 L 1170 14"/>
