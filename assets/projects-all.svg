@@ -34,8 +34,8 @@
 
   <g transform="translate(24,24)">
     <rect class="card" width="273" height="360" rx="2"/>
-    <clipPath id="clip24_24"><rect width="273" height="150"/></clipPath>
-    <image href="https://raw.githubusercontent.com/blacksinisterx/Ai-UX-Auditor/main/docs/screenshots/03-report-card-headline.png" width="273" height="150" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip24_24)"/>
+    <rect class="placeholder" width="273" height="150"/>
+    <text class="phtxt" x="136" y="79" text-anchor="middle" style="font-size:11px">[ LIVE REPORT CARD ]</text>
     <circle class="dot" cx="26" cy="170" r="3" fill="#c9a84c" style="animation-delay:-0.0s"/>
     <text class="idx" x="38" y="174" style="font-size:11px">FILE 01</text>
     <text class="title" x="18" y="198" style="font-size:17px">Aura — AI UX</text>
@@ -48,8 +48,8 @@
   </g>
   <g transform="translate(309,24)">
     <rect class="card" width="273" height="360" rx="2"/>
-    <clipPath id="clip309_24"><rect width="273" height="150"/></clipPath>
-    <image href="https://raw.githubusercontent.com/blacksinisterx/Exploit-Path-Tracer/master/docs/screenshots/07-false-positive.png" width="273" height="150" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip309_24)"/>
+    <rect class="placeholder" width="273" height="150"/>
+    <text class="phtxt" x="136" y="79" text-anchor="middle" style="font-size:11px">[ LIVE SCAN TRACE ]</text>
     <circle class="dot" cx="26" cy="170" r="3" fill="#a78bfa" style="animation-delay:-0.3s"/>
     <text class="idx" x="38" y="174" style="font-size:11px">FILE 02</text>
     <text class="title" x="18" y="198" style="font-size:17px">Exploit-Path Tracer</text>
@@ -60,8 +60,8 @@
   </g>
   <g transform="translate(594,24)">
     <rect class="card" width="273" height="360" rx="2"/>
-    <clipPath id="clip594_24"><rect width="273" height="150"/></clipPath>
-    <image href="https://raw.githubusercontent.com/blacksinisterx/Deposition-Contradiction-Finder/main/docs/screenshots/06-consistent.png" width="273" height="150" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip594_24)"/>
+    <rect class="placeholder" width="273" height="150"/>
+    <text class="phtxt" x="136" y="79" text-anchor="middle" style="font-size:11px">[ LIVE TIMELINE ]</text>
     <circle class="dot" cx="26" cy="170" r="3" fill="#c9a84c" style="animation-delay:-0.6s"/>
     <text class="idx" x="38" y="174" style="font-size:11px">FILE 03</text>
     <text class="title" x="18" y="198" style="font-size:17px">Deposition</text>

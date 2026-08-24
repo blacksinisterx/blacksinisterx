@@ -101,21 +101,24 @@ def wrap_words(text, max_width_px, font_size, font="jbm"):
 
 
 def draw_card(x, y, w, h, idx, title, desc, tags, color, delay=0.0,
-              image_url=None, image_h=0, placeholder_label=None):
-    """One reusable card: optional image/placeholder strip, title, wrapped
+              image_h=0, placeholder_label=None):
+    """One reusable card: optional placeholder strip, title, wrapped
     description, tags. Raises if the wrapped content would overflow the
-    card's own height, so a layout bug fails the build instead of shipping."""
+    card's own height, so a layout bug fails the build instead of shipping.
+
+    No real-image option here on purpose: an SVG loaded via <img src=...>
+    is treated as opaque by the browser, so any <image href="..."> inside
+    it referencing an external URL silently fails to load, regardless of
+    which repo hosts it -- confirmed directly (three real screenshots all
+    rendered as broken-image fallback art, blown up and pixelated, not a
+    cropping bug). A placeholder label is the only option that actually
+    works in this architecture."""
     out = []
     out.append(f'  <g transform="translate({x},{y})">')
     out.append(f'    <rect class="card" width="{w}" height="{h}" rx="2"/>')
 
     body_top = 0
-    if image_url:
-        clip_id = f"clip{x}_{y}"
-        out.append(f'    <clipPath id="{clip_id}"><rect width="{w}" height="{image_h}"/></clipPath>')
-        out.append(f'    <image href="{image_url}" width="{w}" height="{image_h}" preserveAspectRatio="xMidYMid slice" clip-path="url(#{clip_id})"/>')
-        body_top = image_h
-    elif placeholder_label:
+    if placeholder_label:
         out.append(f'    <rect class="placeholder" width="{w}" height="{image_h}"/>')
         out.append(f'    <text class="phtxt" x="{w/2:.0f}" y="{image_h/2+4:.0f}" text-anchor="middle" style="font-size:11px">{esc(placeholder_label)}</text>')
         body_top = image_h
@@ -244,20 +247,19 @@ def build_projects_all():
     replaces the old HTML table + projects-ops.svg + projects-secondary.svg,
     which were three different hand-coded layouts (the actual source of
     the "these don't match" complaint)."""
-    RAW = "https://raw.githubusercontent.com/blacksinisterx"
     cards = [
         dict(idx="FILE 01", title="Aura — AI UX Auditor",
              desc="Real WCAG contrast math on sampled pixels, a real saliency model for attention — one AI call for the one thing code can't judge.",
              tags="NEXT.JS · CONVEX · GEMINI", color="#c9a84c",
-             image=f"{RAW}/Ai-UX-Auditor/main/docs/screenshots/03-report-card-headline.png"),
+             placeholder="[ LIVE REPORT CARD ]"),
         dict(idx="FILE 02", title="Exploit-Path Tracer",
              desc="Traces multi-hop taint paths and tells a real sanitizer apart from one that only looks like it.",
              tags="SEMGREP · LANGGRAPH · GROQ", color="#a78bfa",
-             image=f"{RAW}/Exploit-Path-Tracer/master/docs/screenshots/07-false-positive.png"),
+             placeholder="[ LIVE SCAN TRACE ]"),
         dict(idx="FILE 03", title="Deposition Contradiction Finder",
              desc="Catches real contradictions in witness testimony, and correctly dismisses the ones that only sound like a match.",
              tags="SUPABASE · LANGGRAPH · GROQ", color="#c9a84c",
-             image=f"{RAW}/Deposition-Contradiction-Finder/main/docs/screenshots/06-consistent.png"),
+             placeholder="[ LIVE TIMELINE ]"),
         dict(idx="FILE 04", title="DetectifAI",
              desc="Real-time CCTV threat detection — weapons, intrusions, behavioral anomalies. YOLO + CLIP vision-language + FaceNet identity tracking.",
              tags="YOLO · CLIP · FASTAPI", color="#a78bfa",
@@ -307,8 +309,7 @@ def build_projects_all():
         out.extend(draw_card(
             x, y, cw, card_h, c["idx"], c["title"], c["desc"], c["tags"], c["color"],
             delay=i * 0.3,
-            image_url=c.get("image"),
-            image_h=image_h if (c.get("image") or c.get("placeholder")) else 0,
+            image_h=image_h if c.get("placeholder") else 0,
             placeholder_label=c.get("placeholder"),
         ))
     out.append("</svg>\n")
