@@ -30,13 +30,12 @@
     <rect class="card" width="273" height="210" rx="2"/>
     <circle class="dot" cx="26" cy="20" r="3" fill="#c9a84c" style="animation-delay:-0.0s"/>
     <text class="idx" x="38" y="24" style="font-size:11px">FILE 03</text>
-    <text class="title" x="18" y="48" style="font-size:17px">Deposition</text>
-    <text class="title" x="18" y="69" style="font-size:17px">Contradiction</text>
-    <text class="title" x="18" y="90" style="font-size:17px">Finder</text>
-    <text class="body" x="18" y="119" style="font-size:11px">Catches real contradictions in</text>
-    <text class="body" x="18" y="135" style="font-size:11px">witness testimony, and correctly</text>
-    <text class="body" x="18" y="151" style="font-size:11px">dismisses the ones that only sound</text>
-    <text class="body" x="18" y="167" style="font-size:11px">like a match.</text>
-    <text class="tag" x="18" y="196" style="font-size:9.5px">SUPABASE · LANGGRAPH · GROQ</text>
+    <text class="title" x="18" y="48" style="font-size:17px">DetectifAI</text>
+    <text class="body" x="18" y="77" style="font-size:11px">Real-time CCTV threat detection —</text>
+    <text class="body" x="18" y="93" style="font-size:11px">weapons, intrusions, behavioral</text>
+    <text class="body" x="18" y="109" style="font-size:11px">anomalies. YOLO + CLIP</text>
+    <text class="body" x="18" y="125" style="font-size:11px">vision-language + FaceNet identity</text>
+    <text class="body" x="18" y="141" style="font-size:11px">tracking.</text>
+    <text class="tag" x="18" y="196" style="font-size:9.5px">YOLO · CLIP · FASTAPI</text>
   </g>
 </svg>

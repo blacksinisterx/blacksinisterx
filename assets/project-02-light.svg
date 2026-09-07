@@ -30,11 +30,13 @@
     <rect class="card" width="273" height="210" rx="2"/>
     <circle class="dot" cx="26" cy="20" r="3" fill="#a8873a" style="animation-delay:-0.0s"/>
     <text class="idx" x="38" y="24" style="font-size:11px">FILE 02</text>
-    <text class="title" x="18" y="48" style="font-size:17px">Exploit-Path</text>
-    <text class="title" x="18" y="69" style="font-size:17px">Tracer</text>
-    <text class="body" x="18" y="98" style="font-size:11px">Traces multi-hop taint paths and</text>
-    <text class="body" x="18" y="114" style="font-size:11px">tells a real sanitizer apart from</text>
-    <text class="body" x="18" y="130" style="font-size:11px">one that only looks like it.</text>
-    <text class="tag" x="18" y="196" style="font-size:9.5px">SEMGREP · LANGGRAPH · GROQ</text>
+    <text class="title" x="18" y="48" style="font-size:17px">Deposition</text>
+    <text class="title" x="18" y="69" style="font-size:17px">Contradiction</text>
+    <text class="title" x="18" y="90" style="font-size:17px">Finder</text>
+    <text class="body" x="18" y="119" style="font-size:11px">Catches real contradictions in</text>
+    <text class="body" x="18" y="135" style="font-size:11px">witness testimony, and correctly</text>
+    <text class="body" x="18" y="151" style="font-size:11px">dismisses the ones that only sound</text>
+    <text class="body" x="18" y="167" style="font-size:11px">like a match.</text>
+    <text class="tag" x="18" y="196" style="font-size:9.5px">SUPABASE · LANGGRAPH · GROQ</text>
   </g>
 </svg>

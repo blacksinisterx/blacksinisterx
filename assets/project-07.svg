@@ -30,12 +30,11 @@
     <rect class="card" width="273" height="210" rx="2"/>
     <circle class="dot" cx="26" cy="20" r="3" fill="#c9a84c" style="animation-delay:-0.0s"/>
     <text class="idx" x="38" y="24" style="font-size:11px">FILE 07</text>
-    <text class="title" x="18" y="48" style="font-size:17px">Agentic Airspace</text>
-    <text class="title" x="18" y="69" style="font-size:17px">Copilot</text>
-    <text class="body" x="18" y="98" style="font-size:11px">Live flight-anomaly detection on</text>
-    <text class="body" x="18" y="114" style="font-size:11px">real OpenSky API data. CrewAI +</text>
-    <text class="body" x="18" y="130" style="font-size:11px">LangGraph orchestration with MCP</text>
-    <text class="body" x="18" y="146" style="font-size:11px">tool integration.</text>
-    <text class="tag" x="18" y="196" style="font-size:9.5px">CREWAI · MCP</text>
+    <text class="title" x="18" y="48" style="font-size:17px">ToolSuite</text>
+    <text class="body" x="18" y="77" style="font-size:11px">91 real client-side tools —</text>
+    <text class="body" x="18" y="93" style="font-size:11px">PDF, image, video, dev, AI.</text>
+    <text class="body" x="18" y="109" style="font-size:11px">Nothing uploads; the one</text>
+    <text class="body" x="18" y="125" style="font-size:11px">exception is a sandboxed compile.</text>
+    <text class="tag" x="18" y="196" style="font-size:9.5px">REACT · WASM · VERCEL</text>
   </g>
 </svg>

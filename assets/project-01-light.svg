@@ -30,12 +30,11 @@
     <rect class="card" width="273" height="210" rx="2"/>
     <circle class="dot" cx="26" cy="20" r="3" fill="#6d46b8" style="animation-delay:-0.0s"/>
     <text class="idx" x="38" y="24" style="font-size:11px">FILE 01</text>
-    <text class="title" x="18" y="48" style="font-size:17px">Aura — AI UX</text>
-    <text class="title" x="18" y="69" style="font-size:17px">Auditor</text>
-    <text class="body" x="18" y="98" style="font-size:11px">Real WCAG contrast math on sampled</text>
-    <text class="body" x="18" y="114" style="font-size:11px">pixels, a real saliency model for</text>
-    <text class="body" x="18" y="130" style="font-size:11px">attention — one AI call for the one</text>
-    <text class="body" x="18" y="146" style="font-size:11px">thing code can't judge.</text>
-    <text class="tag" x="18" y="196" style="font-size:9.5px">NEXT.JS · CONVEX · GEMINI</text>
+    <text class="title" x="18" y="48" style="font-size:17px">Exploit-Path</text>
+    <text class="title" x="18" y="69" style="font-size:17px">Tracer</text>
+    <text class="body" x="18" y="98" style="font-size:11px">Traces multi-hop taint paths and</text>
+    <text class="body" x="18" y="114" style="font-size:11px">tells a real sanitizer apart from</text>
+    <text class="body" x="18" y="130" style="font-size:11px">one that only looks like it.</text>
+    <text class="tag" x="18" y="196" style="font-size:9.5px">SEMGREP · LANGGRAPH · GROQ</text>
   </g>
 </svg>

@@ -30,12 +30,12 @@
     <rect class="card" width="273" height="210" rx="2"/>
     <circle class="dot" cx="26" cy="20" r="3" fill="#a8873a" style="animation-delay:-0.0s"/>
     <text class="idx" x="38" y="24" style="font-size:11px">FILE 04</text>
-    <text class="title" x="18" y="48" style="font-size:17px">DetectifAI</text>
-    <text class="body" x="18" y="77" style="font-size:11px">Real-time CCTV threat detection —</text>
-    <text class="body" x="18" y="93" style="font-size:11px">weapons, intrusions, behavioral</text>
-    <text class="body" x="18" y="109" style="font-size:11px">anomalies. YOLO + CLIP</text>
-    <text class="body" x="18" y="125" style="font-size:11px">vision-language + FaceNet identity</text>
-    <text class="body" x="18" y="141" style="font-size:11px">tracking.</text>
-    <text class="tag" x="18" y="196" style="font-size:9.5px">YOLO · CLIP · FASTAPI</text>
+    <text class="title" x="18" y="48" style="font-size:17px">Multi-Tenant</text>
+    <text class="title" x="18" y="69" style="font-size:17px">Agentic RAG</text>
+    <text class="body" x="18" y="98" style="font-size:11px">Tenant isolation, ACL enforcement,</text>
+    <text class="body" x="18" y="114" style="font-size:11px">PII masking, prompt-injection</text>
+    <text class="body" x="18" y="130" style="font-size:11px">detection. Passed red-team</text>
+    <text class="body" x="18" y="146" style="font-size:11px">evaluation.</text>
+    <text class="tag" x="18" y="196" style="font-size:9.5px">LANGCHAIN · CREWAI</text>
   </g>
 </svg>

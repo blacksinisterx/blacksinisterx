@@ -30,12 +30,13 @@
     <rect class="card" width="273" height="210" rx="2"/>
     <circle class="dot" cx="26" cy="20" r="3" fill="#6d46b8" style="animation-delay:-0.0s"/>
     <text class="idx" x="38" y="24" style="font-size:11px">FILE 05</text>
-    <text class="title" x="18" y="48" style="font-size:17px">Multi-Tenant</text>
-    <text class="title" x="18" y="69" style="font-size:17px">Agentic RAG</text>
-    <text class="body" x="18" y="98" style="font-size:11px">Tenant isolation, ACL enforcement,</text>
-    <text class="body" x="18" y="114" style="font-size:11px">PII masking, prompt-injection</text>
-    <text class="body" x="18" y="130" style="font-size:11px">detection. Passed red-team</text>
-    <text class="body" x="18" y="146" style="font-size:11px">evaluation.</text>
-    <text class="tag" x="18" y="196" style="font-size:9.5px">LANGCHAIN · CREWAI</text>
+    <text class="title" x="18" y="48" style="font-size:17px">CrisSim —</text>
+    <text class="title" x="18" y="69" style="font-size:17px">Disaster</text>
+    <text class="title" x="18" y="90" style="font-size:17px">Response</text>
+    <text class="body" x="18" y="119" style="font-size:11px">Heterogeneous agents simulating</text>
+    <text class="body" x="18" y="135" style="font-size:11px">earthquake response — medic and</text>
+    <text class="body" x="18" y="151" style="font-size:11px">drone coordination, benchmarking</text>
+    <text class="body" x="18" y="167" style="font-size:11px">ReAct, Reflexion, and CoT.</text>
+    <text class="tag" x="18" y="196" style="font-size:9.5px">LANGGRAPH · REACT</text>
   </g>
 </svg>
