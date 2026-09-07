@@ -30,11 +30,11 @@
     <rect class="card" width="273" height="210" rx="2"/>
     <circle class="dot" cx="26" cy="20" r="3" fill="#a8873a" style="animation-delay:-0.0s"/>
     <text class="idx" x="38" y="24" style="font-size:11px">FILE 08</text>
-    <text class="title" x="18" y="48" style="font-size:17px">AI Video</text>
-    <text class="title" x="18" y="69" style="font-size:17px">Narrator</text>
-    <text class="body" x="18" y="98" style="font-size:11px">Local text-to-speech and captions,</text>
-    <text class="body" x="18" y="114" style="font-size:11px">entirely in-browser as WASM.</text>
-    <text class="body" x="18" y="130" style="font-size:11px">Nothing leaves the tab.</text>
-    <text class="tag" x="18" y="196" style="font-size:9.5px">KOKORO · FFMPEG.WASM</text>
+    <text class="title" x="18" y="48" style="font-size:17px">ToolSuite</text>
+    <text class="body" x="18" y="77" style="font-size:11px">91 real client-side tools —</text>
+    <text class="body" x="18" y="93" style="font-size:11px">PDF, image, video, dev, AI.</text>
+    <text class="body" x="18" y="109" style="font-size:11px">Nothing uploads; the one</text>
+    <text class="body" x="18" y="125" style="font-size:11px">exception is a sandboxed compile.</text>
+    <text class="tag" x="18" y="196" style="font-size:9.5px">REACT · WASM · VERCEL</text>
   </g>
 </svg>

@@ -30,11 +30,11 @@
     <rect class="card" width="273" height="210" rx="2"/>
     <circle class="dot" cx="26" cy="20" r="3" fill="#c9a84c" style="animation-delay:-0.0s"/>
     <text class="idx" x="38" y="24" style="font-size:11px">FILE 09</text>
-    <text class="title" x="18" y="48" style="font-size:17px">Fact-Check</text>
-    <text class="title" x="18" y="69" style="font-size:17px">Overlay</text>
-    <text class="body" x="18" y="98" style="font-size:11px">Select a claim, get a sourced</text>
-    <text class="body" x="18" y="114" style="font-size:11px">verdict — both sides shown if the</text>
-    <text class="body" x="18" y="130" style="font-size:11px">claim is genuinely contested.</text>
-    <text class="tag" x="18" y="196" style="font-size:9.5px">GROQ · TAVILY</text>
+    <text class="title" x="18" y="48" style="font-size:17px">AI Video</text>
+    <text class="title" x="18" y="69" style="font-size:17px">Narrator</text>
+    <text class="body" x="18" y="98" style="font-size:11px">Local text-to-speech and captions,</text>
+    <text class="body" x="18" y="114" style="font-size:11px">entirely in-browser as WASM.</text>
+    <text class="body" x="18" y="130" style="font-size:11px">Nothing leaves the tab.</text>
+    <text class="tag" x="18" y="196" style="font-size:9.5px">KOKORO · FFMPEG.WASM</text>
   </g>
 </svg>

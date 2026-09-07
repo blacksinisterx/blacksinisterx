@@ -30,11 +30,11 @@
     <rect class="card" width="273" height="210" rx="2"/>
     <circle class="dot" cx="26" cy="20" r="3" fill="#c9a84c" style="animation-delay:-0.0s"/>
     <text class="idx" x="38" y="24" style="font-size:11px">FILE 11</text>
-    <text class="title" x="18" y="48" style="font-size:17px">AI Slop Blocker</text>
-    <text class="body" x="18" y="77" style="font-size:11px">Removes AI-generated posts from a</text>
-    <text class="body" x="18" y="93" style="font-size:11px">feed as you scroll, without</text>
-    <text class="body" x="18" y="109" style="font-size:11px">breaking the page's own React</text>
-    <text class="body" x="18" y="125" style="font-size:11px">state.</text>
-    <text class="tag" x="18" y="196" style="font-size:9.5px">GROQ VISION</text>
+    <text class="title" x="18" y="48" style="font-size:17px">Clickbait</text>
+    <text class="title" x="18" y="69" style="font-size:17px">Decoder</text>
+    <text class="body" x="18" y="98" style="font-size:11px">Names the manipulation tactic in a</text>
+    <text class="body" x="18" y="114" style="font-size:11px">headline and scores it, before you</text>
+    <text class="body" x="18" y="130" style="font-size:11px">spend the click.</text>
+    <text class="tag" x="18" y="196" style="font-size:9.5px">GROQ</text>
   </g>
 </svg>
