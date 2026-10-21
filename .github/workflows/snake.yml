@@ -25,7 +25,9 @@ jobs:
             dist/snake-light.svg?color_snake=%23a8873a&color_dots=%23f0ede0,%23e8d08a,%23c9a84c,%23a78bfa,%237c5cbf&color_background=%23ffffff
 
       - name: draw the contribution graph (self-hosted; the old third-party graph service is gone)
-        run: python3 scripts/activity_graph.py
+        run: |
+          sudo chmod -R a+rwX dist   # the snake step runs in docker as root and created dist/
+          python3 scripts/activity_graph.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USER: ${{ github.repository_owner }}
