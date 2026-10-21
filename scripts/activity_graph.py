@@ -108,7 +108,8 @@ def fetch_days(years, token, now):
     for key in data.values():
         for w in key['contributionCalendar']['weeks']:
             for d in w['contributionDays']:
-                days[dt.date.fromisoformat(d['date'])] = d['contributionCount']
+                day = dt.date.fromisoformat(d['date'])  # a year's edge weeks list days outside it as 0, so never let a 0 overwrite
+                days[day] = max(days.get(day, 0), d['contributionCount'])
     return days
 
 
