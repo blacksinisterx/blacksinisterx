@@ -15,6 +15,12 @@ import sys
 import urllib.request
 from html import escape
 
+def fail(msg):
+    # in GitHub Actions an ::error:: line becomes a run annotation, readable without logging in
+    print(f'::error::{msg}' if os.environ.get('GITHUB_ACTIONS') else msg, file=sys.stderr if not os.environ.get('GITHUB_ACTIONS') else sys.stdout)
+    sys.exit(1)
+
+
 QUERY = ('{ user(login: "%s") { contributionsCollection { contributionCalendar { totalContributions '
          'weeks { firstDay contributionDays { contributionCount } } } } } }')
 
@@ -28,10 +34,14 @@ def fetch(user, token):
     req = urllib.request.Request(
         'https://api.github.com/graphql', data=json.dumps({'query': QUERY % user}).encode(),
         headers={'Authorization': f'bearer {token}', 'User-Agent': 'profile-activity-graph', 'Content-Type': 'application/json'})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        body = json.load(r)
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            body = json.load(r)
+    except Exception as e:  # HTTPError carries the status and GitHub's message
+        detail = ' '.join(e.read().decode('utf8', 'replace')[:300].split()) if hasattr(e, 'read') else ''
+        fail(f'GraphQL request failed: {e} {detail}')
     if body.get('errors') or not body.get('data', {}).get('user'):
-        sys.exit(f'GitHub GraphQL error: {body.get("errors") or "no such user"}')
+        fail(f'GitHub GraphQL error: {body.get("errors") or "no such user"}')
     return body['data']
 
 
@@ -89,11 +99,11 @@ def main():
     else:
         token, user = os.environ.get('GITHUB_TOKEN'), os.environ.get('GH_USER')
         if not token or not user:
-            sys.exit('set GITHUB_TOKEN and GH_USER')
+            fail('set GITHUB_TOKEN and GH_USER')
         data = fetch(user, token)
     weeks, total = weekly(data)
     if len(weeks) < 2:
-        sys.exit('not enough weeks of data to draw a graph')
+        fail('not enough weeks of data to draw a graph')
     os.makedirs(a.out, exist_ok=True)
     for name, theme in THEMES.items():
         with open(os.path.join(a.out, f'activity-{name}.svg'), 'w', encoding='utf8') as f:
@@ -102,4 +112,9 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except SystemExit:
+        raise
+    except Exception as e:  # unexpected: still show the cause in the annotation
+        fail(f'{type(e).__name__}: {e}')
