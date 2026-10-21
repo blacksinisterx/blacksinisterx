@@ -88,15 +88,15 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=f6f2e4&stroke=ddd3b0&ring=6d46b8&fire=9b7ee0&currStreakLabel=1c1810&sideLabels=4a4636&dates=8a7f5e" />
-  <img src="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=07080f&stroke=1e2235&ring=c9a84c&fire=e8d08a&currStreakLabel=e8eaf2&sideLabels=a0aac4&dates=6b7a99" alt="Streak stats" />
+  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=f6f2e4&stroke=ddd3b0&ring=6d46b8&fire=9b7ee0&currStreakNum=1c1810&sideNums=1c1810&currStreakLabel=1c1810&sideLabels=4a4636&dates=8a7f5e" />
+  <img src="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=07080f&stroke=1e2235&ring=c9a84c&fire=e8d08a&currStreakNum=e8eaf2&sideNums=e8eaf2&currStreakLabel=e8eaf2&sideLabels=a0aac4&dates=6b7a99" alt="Streak stats" />
 </picture>
 
 <br/>
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=blacksinisterx&bg_color=f6f2e4&color=4a4636&line=6d46b8&point=a8873a&area=true&area_color=f2e0a8&hide_border=true&custom_title=CONTRIBUTION%20TELEMETRY" />
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=blacksinisterx&bg_color=07080f&color=a0aac4&line=c9a84c&point=a78bfa&area=true&area_color=3d2d7a&hide_border=true&custom_title=CONTRIBUTION%20TELEMETRY" width="100%" alt="Contribution activity graph" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/blacksinisterx/blacksinisterx/output/activity-light.svg" />
+  <img src="https://raw.githubusercontent.com/blacksinisterx/blacksinisterx/output/activity-dark.svg" width="100%" alt="Contribution activity graph" />
 </picture>
 
 <br/><br/>
@@ -107,8 +107,6 @@
 </picture>
 
 </div>
-
-<sub>The language/repo stats card (github-readme-stats.vercel.app) is down at the time of writing — `503 DEPLOYMENT_PAUSED` on the shared public instance, a known issue with that free service, not something broken here. [Self-hosting it](https://vercel.com/import/project?template=https://github.com/anuraghazra/github-readme-stats) takes about two minutes if it's still down when you read this.</sub>
 
 <br/>
 

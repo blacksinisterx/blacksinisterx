@@ -14,6 +14,8 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - uses: Platane/snk@v3
         id: snake
         with:
@@ -21,6 +23,12 @@ jobs:
           outputs: |
             dist/snake-dark.svg?color_snake=%23c9a84c&color_dots=%23161a2c,%231e2235,%232a3050,%237c5cbf,%23a78bfa&color_background=%2307080f
             dist/snake-light.svg?color_snake=%23a8873a&color_dots=%23f0ede0,%23e8d08a,%23c9a84c,%23a78bfa,%237c5cbf&color_background=%23ffffff
+
+      - name: draw the contribution graph (self-hosted; the old third-party graph service is gone)
+        run: python3 scripts/activity_graph.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
 
       - name: push to output branch
         uses: crazy-max/ghaction-github-pages@v4
