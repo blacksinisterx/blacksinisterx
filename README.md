@@ -88,8 +88,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=f6f2e4&stroke=ddd3b0&ring=6d46b8&fire=9b7ee0&currStreakNum=1c1810&sideNums=1c1810&currStreakLabel=1c1810&sideLabels=4a4636&dates=8a7f5e" />
-  <img src="https://streak-stats.demolab.com?user=blacksinisterx&hide_border=true&background=07080f&stroke=1e2235&ring=c9a84c&fire=e8d08a&currStreakNum=e8eaf2&sideNums=e8eaf2&currStreakLabel=e8eaf2&sideLabels=a0aac4&dates=6b7a99" alt="Streak stats" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/blacksinisterx/blacksinisterx/output/streak-light.svg" />
+  <img src="https://raw.githubusercontent.com/blacksinisterx/blacksinisterx/output/streak-dark.svg" alt="Streak stats" />
 </picture>
 
 <br/>
